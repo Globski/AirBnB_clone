@@ -80,8 +80,6 @@ The main objective of this project is to develop a scalable and functional clone
 
 4. **External Data Sources**: Utilize external APIs or data sources to enrich the platform with additional information such as local weather forecasts, transportation options, tourist attractions, and events happening in the area.
 
-By integrating these external services into your Airbnb clone, you can provide users with a comprehensive and feature-rich platform for discovering, booking, and managing accommodations, enhancing its functionality and usability.
-
 ## Project Overview
 The project is structured around a command-line interface (CLI) and a Flask web application.
 | Task | Description | Source Code |
