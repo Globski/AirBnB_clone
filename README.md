@@ -153,7 +153,7 @@ personalized results.
 - Property Management: Comprehensive property management tools allow administrators to review and moderate property listings, ensuring compliance with community guidelines and quality standards.
 - Booking Management: Administrators can view and manage all bookings, including reviewing reservations, resolving disputes, and handling cancellations.
 
-##Learning Objectives
+## Learning Objectives
 
 - How to create a Python package
 - How to create a command interpreter in Python using the cmd module
