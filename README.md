@@ -153,6 +153,19 @@ personalized results.
 - Property Management: Comprehensive property management tools allow administrators to review and moderate property listings, ensuring compliance with community guidelines and quality standards.
 - Booking Management: Administrators can view and manage all bookings, including reviewing reservations, resolving disputes, and handling cancellations.
 
+##Learning Objectives
+
+- How to create a Python package
+- How to create a command interpreter in Python using the cmd module
+- What is Unit testing and how to implement it in a large project
+- How to serialize and deserialize a Class
+- How to write and read a JSON file
+- How to manage datetime
+- What is an UUID
+- What is *args and how to use it
+- What is **kwargs and how to use it
+- How to handle named arguments in a function
+
 ## Getting Started
 To get started with the Airbnb Clone Project, follow these steps:
 
