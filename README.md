@@ -11,7 +11,7 @@
 
 - [Introduction](#introduction)
 - [Objective](#objective)
-- [Project Overview](#project-overview)
+- [Project Structure](#project-structure)
 - [Features](#features)
 - [Getting Started](#getting-started)
   - [Installation](#installation)
@@ -47,41 +47,10 @@ Welcome to the hbnb (Airbnb Clone) Project! This project aims to replicate the c
 
 ## Objective
 
-The main objective of this project is to develop a scalable and functional clone of the Airbnb platform, allowing users to manage properties, bookings, and users via a command-line interface.
+The main objective of this project is to develop a scalable and functional clone of the Airbnb 
 
-### Goals:
+## Project Structure
 
-1. **Create a User-Friendly Airbnb Clone**: Develop a web application similar to Airbnb, providing users with an intuitive interface for listing, discovering, and booking accommodations.
-
-2. **Robust Backend Logic**: Implement backend functionality using Python to handle user authentication, data storage, and business logic effectively.
-
-3. **Efficient Web Development**: Utilize Flask framework to streamline web application development and ensure scalability.
-
-4. **Integration with External Services**: Integrate external APIs for additional features such as mapping services, payment gateways, and recommendation systems.
-
-### Key Features:
-
-- **User Authentication**: Implement user authentication to secure user accounts and provide personalized experiences.
-- **User Registration and Login**: Users can create accounts and log in securely to access the platform's features.
-- **Search and Discovery**: Enable users to search for accommodations based on location, dates, price range, accommodation type, and amenities.
-- **Booking and Payments**: Facilitate the booking process, including secure payment transactions, review booking details, and reservation management.
-- **Accommodation Listings**: Allow hosts to create and manage listings, including details such as property descriptions, photos, pricing, and availability calendars.
-- **User Reviews and Ratings**: Allow users to leave reviews and ratings for accommodations they've stayed in, contributing to a transparent and trustworthy community.
-- **Messaging System**: Built-in messaging system for communication between hosts and guests regarding bookings, inquiries, and special requests.
-- **Admin Dashboard**: Implement an admin dashboard to manage user profiles with information such as booking history, saved listings, and reviews.
-
-### Integration with External Services:
-
-1. **Mapping Services**: Integrate mapping services like Google Maps API or Mapbox to provide users with interactive maps for searching accommodations based on location.
-
-2. **Payment Gateways**: Integrate payment gateways like Stripe, PayPal, or Braintree to facilitate secure and seamless transactions between hosts and guests.
-
-3. **Recommendation Systems**: Implement recommendation systems using machine learning algorithms or collaborative filtering techniques to suggest personalized accommodations to users.
-
-4. **External Data Sources**: Utilize external APIs or data sources to enrich the platform with additional information such as local weather forecasts, transportation options, tourist attractions, and events happening in the area.
-
-## Project Overview
-The project is structured around a command-line interface (CLI) and a Flask web application.
 | Task | Description | Source Code |
 | ---- | ----------- | ----------- |
 | **0. README, AUTHORS** | Write a README.md and an AUTHORS file. | [README.md](./README.md), [AUTHORS](./AUTHORS) |
@@ -108,7 +77,7 @@ The project is structured around a command-line interface (CLI) and a Flask web 
 - **CRUD Operations:** Implement CRUD (Create, read, update, and delete) operations for managing various objects (users, properties, bookings, etc.).
 - **Command-line Interface (CLI):** Implement a command-line interface (CLI) for easy interaction and management.
 - **JSON File Storage:** Integrate JSON file storage for data persistence.
-- **Backend Logic:** Develop classes for various objects (users, properties, bookings, etc.) with robust backend logic.
+- **Backend Logic:** Develop classes for various objects (users, properties, bookings, etc.).
 - **Integration with External APIs:** Integrate external APIs for additional functionality (e.g., mapping services).
 - **User Authentication and Authorization:** Implement user authentication and authorization.
 - **Payment Integration:** Integration with payment gateways for handling transactions.
@@ -117,41 +86,6 @@ The project is structured around a command-line interface (CLI) and a Flask web 
 - **Property Management:** Listing creation, media upload, availability calendar, and booking management.
 - **Booking and Reservation:** Search, filter, instant booking, reservation confirmation, and cancellation policy.
 - **Admin Dashboard:** Overview of key metrics, user and property management, and booking management.
-
-### User Management
-
-- Registration: Users can easily register for an account by providing necessary details such as username, email, and password.
-- Authentication: Secure authentication mechanisms ensure that only authorized users can access the application.
-- Profile Management: Users can update their profiles, including adding profile pictures, changing passwords, and updating contact information.
-- Social Authentication: Integration with social media platforms allows users to log in using their existing accounts, enhancing convenience and user experience.
-
-### Property Management
-
-- Listing Creation: Property owners can create detailed listings for their accommodations, including property type, location, amenities, and pricing.
-- Media Upload: Users can upload multiple images and videos to showcase their properties effectively, attracting potential guests.
-- Availability Calendar: A calendar view allows property owners to manage availability dates, block off booked dates, and update availability status easily.
-- Booking Management: Property owners can view and manage bookings for their properties, including confirming, modifying, or canceling reservations.
-
-### Booking and Reservation
-
-- Search and Filter: Users can search for properties based on location, dates, price range, number of guests, and amenities, with advanced filtering options for 
-personalized results.
-- Instant Booking: Instant booking feature allows users to make immediate reservations without waiting for host approval, providing flexibility and convenience.
-- Reservation Confirmation: Users receive instant confirmation upon booking, along with details such as booking ID, property information, and payment summary.
-- Cancellation Policy: Clear and transparent cancellation policies are provided to users, outlining refund conditions and penalties for cancellations.
-
-### Payment Integration
-
-- Payment Gateways: Integration with popular payment gateways such as Stripe, PayPal, and Square enables users to make secure payments using various methods, including credit/debit cards, digital wallets, and bank transfers.
-- SSL Encryption: All payment transactions are encrypted with SSL (Secure Sockets Layer) technology to protect sensitive financial information and ensure data security.
-- Payment Confirmation: Users receive payment confirmation and receipts for successful transactions, providing peace of mind and transparency throughout the booking process.
-
-### Admin Dashboard
-
-- Dashboard Overview: An intuitive dashboard provides administrators with an overview of key metrics, including total users, bookings, revenue, and property listings.
-- User Management: Administrators can manage user accounts, including creating new accounts, disabling accounts, and resetting passwords.
-- Property Management: Comprehensive property management tools allow administrators to review and moderate property listings, ensuring compliance with community guidelines and quality standards.
-- Booking Management: Administrators can view and manage all bookings, including reviewing reservations, resolving disputes, and handling cancellations.
 
 ## Learning Objectives
 
@@ -165,6 +99,10 @@ personalized results.
 - What is *args and how to use it
 - What is **kwargs and how to use it
 - How to handle named arguments in a function
+
+## Command Interpreter
+
+The command interpreter is a Python-based CLI that provides a shell for interacting with hbnb objects. It allows users to perform various operations on objects, such as creating, retrieving, updating, and deleting them.
 
 ## Getting Started
 To get started with the Airbnb Clone Project, follow these steps:
@@ -181,30 +119,7 @@ git clone https://github.com/yourusername/hbnb-clone.git
 cd hbnb-clone
 ```
 
-3. Install Dependencies: Use pip to install the required Python dependencies:
-```
-pip install -r requirements.txt
-```
-
-4. Set Up the Database: Configure the database settings in config.py and run the database migrations:
-```
-flask db init
-flask db migrate
-flask db upgrade
-```
-
-5. Run the Application: Start the Flask development server to run the application:
-```
-flask run
-```
-
-6. Access the Application: Open a web browser and navigate to http://localhost:5000 to access the Airbnb Clone application.
-
-## Command Interpreter
-
-The command interpreter is a Python-based CLI that provides a shell for interacting with hbnb objects. It allows users to perform various operations on objects, such as creating, retrieving, updating, and deleting them.
-
-## How to Start
+3. How to Start
 To start the command interpreter, simply run the `console.py` script from the terminal:
 ```
 ./console.py
