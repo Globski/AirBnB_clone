@@ -13,29 +13,12 @@
 - [Objective](#objective)
 - [Project Structure](#project-structure)
 - [Features](#features)
+- [Learning Objectives](#learning-objectives)
+- [Command Interpreter](#command-interpreter)
 - [Getting Started](#getting-started)
   - [Installation](#installation)
-  - [Command Interpreter](#command-interpreter)
   - [Usage](#usage)
 - [Tasks](#tasks)
-  - [Task 0: Create a Python script that starts a Flask web application](#task-0-create-a-python-script-that-starts-a-flask-web-application)
-  - [Task 1: Create a basic Flask app](#task-1-create-a-basic-flask-app)
-  - [Task 2: Display "Hello HBNB!" on the web app](#task-2-display-hello-hbnb-on-the-web-app)
-  - [Task 3: Display specified route](#task-3-display-specified-route)
-  - [Task 4: Display "HBNB" if no specified route found](#task-4-display-hbnb-if-no-specified-route-found)
-  - [Task 5: Display template for HTML](#task-5-display-template-for-html)
-  - [Task 6: Add additional route and template](#task-6-add-additional-route-and-template)
-  - [Task 7: Display specified status code](#task-7-display-specified-status-code)
-  - [Task 8: Render dynamic content with Flask](#task-8-render-dynamic-content-with-flask)
-  - [Task 9: Render dynamic content from storage](#task-9-render-dynamic-content-from-storage)
-  - [Task 10: Update state](#task-10-update-state)
-  - [Task 11: Add route for /states](#task-11-add-route-for-states)
-  - [Task 12: Display cities by state](#task-12-display-cities-by-state)
-  - [Task 13: Add route for /cities_by_states](#task-13-add-route-for-cities_by_states)
-  - [Task 14: Update routes for /cities_by_states](#task-14-update-routes-for-cities_by_states)
-  - [Task 15: Display cities by state with specified storage](#task-15-display-cities-by-state-with-specified-storage)
-  - [Task 16: Update states route with place objects](#task-16-update-states-route-with-place-objects)
-  - [Task 17: Display places by city](#task-17-display-places-by-city)
 - [Advanced Features](#advanced-features)
 - [Technologies Used](#technologies-used)
 - [Contributors](#contributors)
@@ -137,39 +120,64 @@ Once the command interpreter is running, you can enter commands to interact with
 - quit: Exit the command interpreter
 
 ### Example
-Create a new user:
+Create a new instance of a class:
 ```
-(hbnb) create User
-```
-
-Show details of a specific user:
-```
-(hbnb) show User 1234-5678
+(hbnb) create BaseModel
 ```
 
+Show all instances of a class:
 ```
-(hbnb) destroy User 1234-1234-1234
-```
-
-Update the name attribute of a user:
-```
-(hbnb) update User 1234-5678 name "John Doe"
+(hbnb) all BaseModel
 ```
 
-### Examples
+Show a specific instance by ID:
 ```
-$ ./console.py
-(hbnb) create User
-6f9307b1-1104-4c3c-843c-d1f0ec34f88d
-(hbnb) show User 6f9307b1-1104-4c3c-843c-d1f0ec34f88d
-[User] (6f9307b1-1104-4c3c-843c-d1f0ec34f88d) {'id': '6f9307b1-1104-4c3c-843c-d1f0ec34f88d'}
-(hbnb) update User 6f9307b1-1104-4c3c-843c-d1f0ec34f88d first_name "John"
-(hbnb) show User 6f9307b1-1104-4c3c-843c-d1f0ec34f88d
-[User] (6f9307b1-1104-4c3c-843c-d1f0ec34f88d) {'id': '6f9307b1-1104-4c3c-843c-d1f0ec34f88d', 'first_name': 'John'}
-(hbnb) all User
-["[User] (6f9307b1-1104-4c3c-843c-d1f0ec34f88d) {'id': '6f9307b1-1104-4c3c-843c-d1f0ec34f88d', 'first_name': 'John'}"]
+(hbnb) show BaseModel 1234-5678-9012
+```
+
+Update an instance:
+```
+(hbnb) update BaseModel 1234-5678-9012 name "New Name"
+```
+
+Destroy an instance:
+```
+(hbnb) destroy BaseModel 1234-5678-9012
+```
+
+Retrieve all instances of a class by class name:
+```
+(hbnb) User.all()
+```
+
+Retrieve the number of instances of a class:
+```
+(hbnb) User.count()
+```
+
+Retrieve an instance based on its ID:
+```
+(hbnb) User.show("1234-5678-9012")
+```
+
+Destroy an instance based on its ID:
+```
+(hbnb) User.destroy("1234-5678-9012")
+```
+
+Update an instance based on its ID and attribute name/value:
+```
+(hbnb) User.update("1234-5678-9012", "first_name", "John")
+```
+
+Update an instance based on its ID with a dictionary:
+```
+(hbnb) User.update("1234-5678-9012", {'first_name': "John", "age": 89})
+```
+
+Exit the console:
+```
 (hbnb) quit
-$
 ```
 
 ### Sample Usage
@@ -183,10 +191,17 @@ $ ./console.py
 [BaseModel] (49faff9a-6318-451f-87b6-910505c55907) {'created_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903293), 'id': '49faff9a-6318-451f-87b6-910505c55907', 'updated_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903300)}
 (hbnb) all BaseModel
 ["[BaseModel] (49faff9a-6318-451f-87b6-910505c55907) {'created_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903293), 'id': '49faff9a-6318-451f-87b6-910505c55907', 'updated_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903300)}"]
-(hbnb) create User
-38f22813-2753-4d42-b37c-57a17f1e4f88
-(hbnb) all User
-["[User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'email': 'airbnb@mail.com', 'first_name': 'Betty', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88', 'last_name': 'Bar', 'password': 'root', 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848291)}"]
+(hbnb) User.count()
+2
+(hbnb) User.destroy("246c227a-d5c1-403d-9bc7-6a47bb9f0f68")
+(hbnb) User.count()
+1
+(hbnb) User.destroy("Bar")
+** no instance found **
+(hbnb) User.show("246c227a-d5c1-403d-9bc7-6a47bb9f0f68")
+[User] (246c227a-d5c1-403d-9bc7-6a47bb9f0f68) {'first_name': 'Betty', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611352), 'updated_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611363), 'password': '63a9f0ea7bb98050796b649e85481845', 'email': 'airbnb@mail.com', 'id': '246c227a-d5c1-403d-9bc7-6a47bb9f0f68'}
+(hbnb) User.show("Bar")
+** no instance found **
 (hbnb) exit
 $
 ```
@@ -204,189 +219,65 @@ The application supports the following classes:
 
 ## Tasks
 
-- Task 0: Create a Python script that starts a Flask web application
-- Task 1: Create a basic Flask app
-- Task 2: Display "Hello HBNB!" on web app
-- Task 3: Display specified route
-- Task 4: Display "HBNB" if no specified route found
-- Task 5: Display template for HTML
-- Task 6: Add additional route and template
-- Task 7: Display specified status code
-- Task 8: Render dynamic content with Flask
-- Task 9: Render dynamic content from storage
-- Task 10: Update state
-- Task 11: Add route for /states
-- Task 12: Display cities by state
-- Task 13: Add route for /cities_by_states
-- Task 14: Update routes for /cities_by_states
-- Task 15: Display cities by state with specified storage
-- Task 16: Update states route with place objects
-- Task 17: Display places by city
+### More classes!
+- Write classes that inherit from BaseModel:
+  - State (models/state.py)
+    - Public class attributes:
+      - name: string (empty string)
+  - City (models/city.py)
+    - Public class attributes:
+      - state_id: string (empty string)
+      - name: string (empty string)
+  - Amenity (models/amenity.py)
+    - Public class attributes:
+      - name: string (empty string)
+  - Place (models/place.py)
+    - Public class attributes:
+      - city_id: string (empty string)
+      - user_id: string (empty string)
+      - name: string (empty string)
+      - description: string (empty string)
+      - number_rooms: integer (0)
+      - number_bathrooms: integer (0)
+      - max_guest: integer (0)
+      - price_by_night: integer (0)
+      - latitude: float (0.0)
+      - longitude: float (0.0)
+      - amenity_ids: list of string (empty list)
+  - Review (models/review.py)
+    - Public class attributes:
+      - place_id: string (empty string)
+      - user_id: string (empty string)
+      - text: string (empty string)
 
-### Task 0: Create a Python script that starts a Flask web application
-  - Initialize Flask app
-  - Run the app
-  - Check if everything is set up correctly by accessing the server
+### Console 1.0
 
-### Task 1: Create a basic Flask app
-  - Set up Flask app structure
-  - Define a basic route
-  - Test the route to ensure it returns the expected output
-
-### Task 2: Display "Hello HBNB!" on the web app
-  - Update the route to return "Hello HBNB!"
-  - Test the route to ensure it displays the correct message
-
-### Task 3: Display specified route
-  - Create a new route to display a specified message
-  - Test the new route to ensure it displays the specified message
-
-### Task 4: Display "HBNB" if no specified route found
-  - Handle cases where no specified route is found
-  - Update the app to return "HBNB" in such cases
-  - Test to ensure the app displays "HBNB" when accessing an undefined route
-
-### Task 5: Display template for HTML
-  - Create an HTML template
-  - Render the template using Flask
-  - Test to ensure the template is displayed correctly in the browser
-
-### Task 6: Add additional route and template
-  - Create a new route in the Flask app
-  - Define a new HTML template for the route
-  - Test to ensure the new route and template are working correctly
-
-### Task 7: Display specified status code
-  - Update the Flask app to return a specified HTTP status code
-  - Test to ensure the correct status code is returned when accessing the route
-
-### Task 8: Render dynamic content with Flask
-  - Update the Flask app to render dynamic content
-  - Pass variables to the HTML template
-  - Test to ensure the dynamic content is displayed correctly
-
-### Task 9: Render dynamic content from storage
-  - Integrate Flask with a storage system
-  - Retrieve dynamic content from the storage system
-  - Pass the content to the HTML template
-  - Test to ensure the content is displayed correctly
-
-### Task 10: Update state
-  - Modify the state of the application
-  - Test to ensure the state is updated correctly
-
-### Task 11: Add route for /states
-  - Create a route to display information about states
-  - Test the route to ensure it returns the expected information
-
-### Task 12: Display cities by state
-  - Retrieve information about cities based on a state
-  - Display the cities on the web app
-  - Test to ensure the correct cities are displayed for a given state
-
-### Task 13: Add route for /cities_by_states
-  - Create a route to display cities grouped by states
-  - Test the route to ensure it returns the expected information
-
-### Task 14: Update routes for /cities_by_states
-  - Modify routes to handle different HTTP methods
-  - Test the routes to ensure they handle different requests correctly
-
-### Task 15: Display cities by state with specified storage
-  - Integrate Flask with a specified storage system
-  - Retrieve cities by state from the specified storage
-  - Test to ensure the correct cities are displayed for a given state
-
-### Task 16: Update states route with place objects
-  - Modify the states route to handle place objects
-  - Test to ensure the correct place objects are displayed for a given state
-
-### Task 17: Display places by city
-  - Retrieve places based on a city
-  - Display the places on the web app
-  - Test to ensure the correct places are displayed for a given city
+- Update FileStorage to manage correctly serialization and deserialization of all our new classes: Place, State, City, Amenity and Review
+- Update command interpreter (console.py) to allow those actions: show, create, destroy, update and all with all classes created previously.
 
 ## Advanced Features
 
-### 0: Implement pagination for /cities_by_states route
-  - Paginate the list of cities displayed on the /cities_by_states route
-  - Test to ensure pagination works correctly and displays the desired number of cities per page
+### All instances by class name
+- Update command interpreter (console.py) to retrieve all instances of a class by using `<class name>.all()`
 
-### 1: Implement pagination for /states route
-  - Paginate the list of states displayed on the /states route
-  - Test to ensure pagination works correctly and displays the desired number of states per page
+### Count instances
+- Update command interpreter (console.py) to retrieve the number of instances of a class using `<class name>.count()`
 
-### 2: Create API routes
-  - Define API routes to expose data in JSON format
-  - Test the API routes to ensure they return the expected JSON data
+### Show
+- Update command interpreter (console.py) to retrieve an instance based on its ID using `<class name>.show(<id>)`
 
-### 3: Implement filters for /states route
-  - Add filters to the /states route to allow users to filter states by various criteria (e.g., name, population)
-  - Test to ensure the filters work correctly and return the expected results
+### Destroy
+- Update command interpreter (console.py) to destroy an instance based on its ID using `<class name>.destroy(<id>)`
 
-### 4: Implement filters for /cities_by_states route
-  - Add filters to the /cities_by_states route to allow users to filter cities by various criteria (e.g., name, population)
-  - Test to ensure the filters work correctly and return the expected results
+### Update
+- Update command interpreter (console.py) to update an instance based on its ID using `<class name>.update(<id>, <attribute name>, <attribute value>)`
 
-### 5: Create user authentication system
-  - Implement a user authentication system to restrict access to certain routes
-  - Test to ensure only authenticated users can access restricted routes
+### Update from dictionary
+- Update command interpreter (console.py) to update an instance based on its ID with a dictionary using `<class name>.update(<id>, <dictionary representation>)`
 
-### 6: Implement user permissions
-  - Define different levels of user permissions (e.g., admin, regular user)
-  - Restrict access to certain routes based on user permissions
-  - Test to ensure users can only access routes they have permission to access
-
-### 7: Add support for file uploads
-  - Implement functionality to allow users to upload files (e.g., images, documents)
-  - Test to ensure file uploads work correctly and files are stored properly
-
-### 8: Implement error handling
-  - Add error handling to the Flask app to gracefully handle exceptions and errors
-  - Test to ensure error messages are displayed appropriately and the app remains stable
-
-### 9: Implement logging
-  - Integrate logging functionality into the Flask app to record events and errors
-  - Test to ensure logs are generated correctly and contain useful information for debugging
-
-### 10: Implement caching
-  - Add caching functionality to the Flask app to improve performance and reduce server load
-  - Test to ensure cached data is served efficiently and accurately
-
-### 11: Implement internationalization (i18n) support
-  - Add support for multiple languages in the Flask app
-  - Test to ensure the app displays content in the user's preferred language
-
-### 12: Implement session management
-  - Manage user sessions securely in the Flask app
-  - Test to ensure sessions are created, maintained, and destroyed properly
-
-### 13: Implement CSRF protection
-  - Protect against Cross-Site Request Forgery (CSRF) attacks by implementing CSRF tokens
-  - Test to ensure CSRF protection is effective and prevents unauthorized requests
-
-### 14: Implement rate limiting
-  - Limit the number of requests a user can make to certain routes within a specified time period
-  - Test to ensure rate limiting is enforced correctly and prevents abuse
-
-### 15:
-- Implement SSL/TLS encryption
-  - Secure communication between clients and the Flask app using SSL/TLS encryption
-  - Test to ensure data is encrypted properly and transmitted securely over HTTPS
-
-### 16: Implement role-based access control (RBAC)
-  - Define roles and permissions for different user types
-  - Restrict access to routes based on user roles
-  - Test to ensure RBAC is implemented correctly and restricts access as intended
-
-### 17: Implement OAuth authentication
-  - Allow users to log in to the Flask app using OAuth providers (e.g., Google, Facebook)
-  - Test to ensure OAuth authentication works correctly and users can log in using their OAuth accounts
-
-
-### 18: Integrate payment gateway
-  - Implement functionality to accept online payments using a payment gateway (e.g., Stripe, PayPal)
-  - Test to ensure payments are processed securely and successfully, with appropriate handling of payment-related errors and notification
+### Unittests for the Console!
+- Write unit tests for all features in console.py
+- Ensure tests pass in both interactive and non-interactive mode
 
 ## Technologies Used
 
