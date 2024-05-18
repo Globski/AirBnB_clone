@@ -232,6 +232,10 @@ Show details of a specific user:
 (hbnb) show User 1234-5678
 ```
 
+```
+(hbnb) destroy User 1234-1234-1234
+```
+
 Update the name attribute of a user:
 ```
 (hbnb) update User 1234-5678 name "John Doe"
