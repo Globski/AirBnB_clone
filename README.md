@@ -85,7 +85,16 @@ The main objective of this project is to develop a scalable and functional clone
 
 ## Command Interpreter
 
-The command interpreter is a Python-based CLI that provides a shell for interacting with hbnb objects. It allows users to perform various operations on objects, such as creating, retrieving, updating, and deleting them.
+The command interpreter is a Python-based CLI that provides a shell for interacting with hbnb objects. It allows users to perform various operations on objects, such as creating, retrieving, updating, and deleting them. It supports the following functionalities:
+
+- create: Create a new object (e.g., User, Place)
+- show: Retrieve an object from storage
+- update: Update attributes of an object
+- destroy: Delete an object
+- all: Retrieve all objects of a certain type
+- count: Count the number of objects of a certain type
+- quit: Exit the command interpreter
+
 
 ## Getting Started
 To get started with the Airbnb Clone Project, follow these steps:
@@ -111,13 +120,13 @@ To start the command interpreter, simply run the `console.py` script from the te
 ## Usage
 Once the command interpreter is running, you can enter commands to interact with hbnb objects. The available commands include:
 
-- create: Create a new object (e.g., User, Place)
-- show: Retrieve an object from storage
-- update: Update attributes of an object
-- destroy: Delete an object
-- all: Retrieve all objects of a certain type
-- count: Count the number of objects of a certain type
-- quit: Exit the command interpreter
+- help: Display the help men
+- quit: Exit the interpreter
+- create <ClassName>: Create a new instance of a class
+- show <ClassName> <id>: Display the string representation of an instance
+- destroy <ClassName> <id>: Delete an instance
+- all [<ClassName>]: Display all instances of a class, or all instances if no class is specified
+- update <ClassName> <id> <attribute_name> <attribute_value>: Update an instance’s attribute
 
 ### Example
 Create a new instance of a class:
@@ -185,6 +194,12 @@ Here's a sample session demonstrating the usage of the console:
 
 ```
 $ ./console.py
+(hbnb) help
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+
 (hbnb) create BaseModel
 49faff9a-6318-451f-87b6-910505c55907
 (hbnb) show BaseModel 49faff9a-6318-451f-87b6-910505c55907
@@ -206,6 +221,11 @@ $ ./console.py
 $
 ```
 
+## Requirements
+
+- Python 3.8.
+- Ubuntu 20.04 LTS
+ 
 ## Supported Classes
 The application supports the following classes:
 
