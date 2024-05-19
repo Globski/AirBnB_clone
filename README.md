@@ -111,8 +111,8 @@ To start the command interpreter, simply run the `console.py` script from the te
 ## Usage
 Once the command interpreter is running, you can enter commands to interact with hbnb objects. The available commands include:
 
-- create: Create a new object
-- show: Retrieve an object
+- create: Create a new object (e.g., User, Place)
+- show: Retrieve an object from storage
 - update: Update attributes of an object
 - destroy: Delete an object
 - all: Retrieve all objects of a certain type
