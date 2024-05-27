@@ -26,7 +26,9 @@
 - [Acknowledgments](#acknowledgments)
 
 ## Introduction
-Welcome to the hbnb (Airbnb Clone) Project! This project aims to replicate the core functionality of the Airbnb platform. It includes a command-line interpreter (console) that interacts with JSON files to manage various objects like properties, bookings, and users. These objects are stored in JSON files, representing the backend of an Airbnb-like application. The CLI will allow users to create, retrieve, update, and delete various objects used in the hbnb application.
+Welcome to the hbnb (Airbnb Clone) Project! This project aims to replicate the core functionality of the Airbnb platform. It includes a command-line interpreter (console) that interacts with JSON files to manage various objects like properties, bookings, and users. These objects are stored in JSON files, representing the backend of an Airbnb-like application. The CLI will allow users to create, retrieve, update, and delete various objects used in the hbnb application. 
+
+Web static development involves creating static HTML pages and applying styles using CSS. Building the front end step-by-step by creating simple HTML static pages, style guides, and fake contents without using JavaScript. The main goal is to learn how to manipulate HTML and CSS languages.
 
 ## Objective
 
@@ -99,6 +101,22 @@ The main objective of this project is to develop a scalable and functional clone
 - What is *args and how to use it
 - What is **kwargs and how to use it
 - How to handle named arguments in a function
+
+##
+HTML, CSS, and front-end development:
+- What is HTML
+- How to create an HTML page
+- What is a markup language
+- What is the DOM
+- What is an element / tag
+- What is an attribute
+- How does the browser load a webpage
+- What is CSS
+- How to add style to an element
+- What is a class
+- What is a selector
+- How to compute CSS Specificity Value
+- What are Box properties in CSS
 
 ## Command Interpreter
 
@@ -242,6 +260,9 @@ $
 
 - Python 3.8.
 - Ubuntu 20.04 LTS
+
+##
+- W3C compliant HTML code
  
 ## Supported Classes
 The application supports the following classes:
