@@ -11,31 +11,14 @@
 
 - [Introduction](#introduction)
 - [Objective](#objective)
-- [Project Overview](#project-overview)
+- [Project Structure](#project-structure)
 - [Features](#features)
+- [Learning Objectives](#learning-objectives)
+- [Command Interpreter](#command-interpreter)
 - [Getting Started](#getting-started)
   - [Installation](#installation)
-  - [Command Interpreter](#command-interpreter)
   - [Usage](#usage)
 - [Tasks](#tasks)
-  - [Task 0: Create a Python script that starts a Flask web application](#task-0-create-a-python-script-that-starts-a-flask-web-application)
-  - [Task 1: Create a basic Flask app](#task-1-create-a-basic-flask-app)
-  - [Task 2: Display "Hello HBNB!" on the web app](#task-2-display-hello-hbnb-on-the-web-app)
-  - [Task 3: Display specified route](#task-3-display-specified-route)
-  - [Task 4: Display "HBNB" if no specified route found](#task-4-display-hbnb-if-no-specified-route-found)
-  - [Task 5: Display template for HTML](#task-5-display-template-for-html)
-  - [Task 6: Add additional route and template](#task-6-add-additional-route-and-template)
-  - [Task 7: Display specified status code](#task-7-display-specified-status-code)
-  - [Task 8: Render dynamic content with Flask](#task-8-render-dynamic-content-with-flask)
-  - [Task 9: Render dynamic content from storage](#task-9-render-dynamic-content-from-storage)
-  - [Task 10: Update state](#task-10-update-state)
-  - [Task 11: Add route for /states](#task-11-add-route-for-states)
-  - [Task 12: Display cities by state](#task-12-display-cities-by-state)
-  - [Task 13: Add route for /cities_by_states](#task-13-add-route-for-cities_by_states)
-  - [Task 14: Update routes for /cities_by_states](#task-14-update-routes-for-cities_by_states)
-  - [Task 15: Display cities by state with specified storage](#task-15-display-cities-by-state-with-specified-storage)
-  - [Task 16: Update states route with place objects](#task-16-update-states-route-with-place-objects)
-  - [Task 17: Display places by city](#task-17-display-places-by-city)
 - [Advanced Features](#advanced-features)
 - [Technologies Used](#technologies-used)
 - [Contributors](#contributors)
@@ -47,43 +30,10 @@ Welcome to the hbnb (Airbnb Clone) Project! This project aims to replicate the c
 
 ## Objective
 
-The main objective of this project is to develop a scalable and functional clone of the Airbnb platform, allowing users to manage properties, bookings, and users via a command-line interface.
+The main objective of this project is to develop a scalable and functional clone of the Airbnb 
 
-### Goals:
+## Project Structure
 
-1. **Create a User-Friendly Airbnb Clone**: Develop a web application similar to Airbnb, providing users with an intuitive interface for listing, discovering, and booking accommodations.
-
-2. **Robust Backend Logic**: Implement backend functionality using Python to handle user authentication, data storage, and business logic effectively.
-
-3. **Efficient Web Development**: Utilize Flask framework to streamline web application development and ensure scalability.
-
-4. **Integration with External Services**: Integrate external APIs for additional features such as mapping services, payment gateways, and recommendation systems.
-
-### Key Features:
-
-- **User Authentication**: Implement user authentication to secure user accounts and provide personalized experiences.
-- **User Registration and Login**: Users can create accounts and log in securely to access the platform's features.
-- **Search and Discovery**: Enable users to search for accommodations based on location, dates, price range, accommodation type, and amenities.
-- **Booking and Payments**: Facilitate the booking process, including secure payment transactions, review booking details, and reservation management.
-- **Accommodation Listings**: Allow hosts to create and manage listings, including details such as property descriptions, photos, pricing, and availability calendars.
-- **User Reviews and Ratings**: Allow users to leave reviews and ratings for accommodations they've stayed in, contributing to a transparent and trustworthy community.
-- **Messaging System**: Built-in messaging system for communication between hosts and guests regarding bookings, inquiries, and special requests.
-- **Admin Dashboard**: Implement an admin dashboard to manage user profiles with information such as booking history, saved listings, and reviews.
-
-### Integration with External Services:
-
-1. **Mapping Services**: Integrate mapping services like Google Maps API or Mapbox to provide users with interactive maps for searching accommodations based on location.
-
-2. **Payment Gateways**: Integrate payment gateways like Stripe, PayPal, or Braintree to facilitate secure and seamless transactions between hosts and guests.
-
-3. **Recommendation Systems**: Implement recommendation systems using machine learning algorithms or collaborative filtering techniques to suggest personalized accommodations to users.
-
-4. **External Data Sources**: Utilize external APIs or data sources to enrich the platform with additional information such as local weather forecasts, transportation options, tourist attractions, and events happening in the area.
-
-By integrating these external services into your Airbnb clone, you can provide users with a comprehensive and feature-rich platform for discovering, booking, and managing accommodations, enhancing its functionality and usability.
-
-## Project Overview
-The project is structured around a command-line interface (CLI) and a Flask web application.
 | Task | Description | Source Code |
 | ---- | ----------- | ----------- |
 | **0. README, AUTHORS** | Write a README.md and an AUTHORS file. | [README.md](./README.md), [AUTHORS](./AUTHORS) |
@@ -110,7 +60,7 @@ The project is structured around a command-line interface (CLI) and a Flask web 
 - **CRUD Operations:** Implement CRUD (Create, read, update, and delete) operations for managing various objects (users, properties, bookings, etc.).
 - **Command-line Interface (CLI):** Implement a command-line interface (CLI) for easy interaction and management.
 - **JSON File Storage:** Integrate JSON file storage for data persistence.
-- **Backend Logic:** Develop classes for various objects (users, properties, bookings, etc.) with robust backend logic.
+- **Backend Logic:** Develop classes for various objects (users, properties, bookings, etc.).
 - **Integration with External APIs:** Integrate external APIs for additional functionality (e.g., mapping services).
 - **User Authentication and Authorization:** Implement user authentication and authorization.
 - **Payment Integration:** Integration with payment gateways for handling transactions.
@@ -120,40 +70,31 @@ The project is structured around a command-line interface (CLI) and a Flask web 
 - **Booking and Reservation:** Search, filter, instant booking, reservation confirmation, and cancellation policy.
 - **Admin Dashboard:** Overview of key metrics, user and property management, and booking management.
 
-### User Management
+## Learning Objectives
 
-- Registration: Users can easily register for an account by providing necessary details such as username, email, and password.
-- Authentication: Secure authentication mechanisms ensure that only authorized users can access the application.
-- Profile Management: Users can update their profiles, including adding profile pictures, changing passwords, and updating contact information.
-- Social Authentication: Integration with social media platforms allows users to log in using their existing accounts, enhancing convenience and user experience.
+- How to create a Python package
+- How to create a command interpreter in Python using the cmd module
+- What is Unit testing and how to implement it in a large project
+- How to serialize and deserialize a Class
+- How to write and read a JSON file
+- How to manage datetime
+- What is an UUID
+- What is *args and how to use it
+- What is **kwargs and how to use it
+- How to handle named arguments in a function
 
-### Property Management
+## Command Interpreter
 
-- Listing Creation: Property owners can create detailed listings for their accommodations, including property type, location, amenities, and pricing.
-- Media Upload: Users can upload multiple images and videos to showcase their properties effectively, attracting potential guests.
-- Availability Calendar: A calendar view allows property owners to manage availability dates, block off booked dates, and update availability status easily.
-- Booking Management: Property owners can view and manage bookings for their properties, including confirming, modifying, or canceling reservations.
+The command interpreter is a Python-based CLI that provides a shell for interacting with hbnb objects. It allows users to perform various operations on objects, such as creating, retrieving, updating, and deleting them. It supports the following functionalities:
 
-### Booking and Reservation
+- create: Create a new object (e.g., User, Place)
+- show: Retrieve an object from storage
+- update: Update attributes of an object
+- destroy: Delete an object
+- all: Retrieve all objects of a certain type
+- count: Count the number of objects of a certain type
+- quit: Exit the command interpreter
 
-- Search and Filter: Users can search for properties based on location, dates, price range, number of guests, and amenities, with advanced filtering options for 
-personalized results.
-- Instant Booking: Instant booking feature allows users to make immediate reservations without waiting for host approval, providing flexibility and convenience.
-- Reservation Confirmation: Users receive instant confirmation upon booking, along with details such as booking ID, property information, and payment summary.
-- Cancellation Policy: Clear and transparent cancellation policies are provided to users, outlining refund conditions and penalties for cancellations.
-
-### Payment Integration
-
-- Payment Gateways: Integration with popular payment gateways such as Stripe, PayPal, and Square enables users to make secure payments using various methods, including credit/debit cards, digital wallets, and bank transfers.
-- SSL Encryption: All payment transactions are encrypted with SSL (Secure Sockets Layer) technology to protect sensitive financial information and ensure data security.
-- Payment Confirmation: Users receive payment confirmation and receipts for successful transactions, providing peace of mind and transparency throughout the booking process.
-
-### Admin Dashboard
-
-- Dashboard Overview: An intuitive dashboard provides administrators with an overview of key metrics, including total users, bookings, revenue, and property listings.
-- User Management: Administrators can manage user accounts, including creating new accounts, disabling accounts, and resetting passwords.
-- Property Management: Comprehensive property management tools allow administrators to review and moderate property listings, ensuring compliance with community guidelines and quality standards.
-- Booking Management: Administrators can view and manage all bookings, including reviewing reservations, resolving disputes, and handling cancellations.
 
 ## Getting Started
 To get started with the Airbnb Clone Project, follow these steps:
@@ -170,30 +111,7 @@ git clone https://github.com/yourusername/hbnb-clone.git
 cd hbnb-clone
 ```
 
-3. Install Dependencies: Use pip to install the required Python dependencies:
-```
-pip install -r requirements.txt
-```
-
-4. Set Up the Database: Configure the database settings in config.py and run the database migrations:
-```
-flask db init
-flask db migrate
-flask db upgrade
-```
-
-5. Run the Application: Start the Flask development server to run the application:
-```
-flask run
-```
-
-6. Access the Application: Open a web browser and navigate to http://localhost:5000 to access the Airbnb Clone application.
-
-## Command Interpreter
-
-The command interpreter is a Python-based CLI that provides a shell for interacting with hbnb objects. It allows users to perform various operations on objects, such as creating, retrieving, updating, and deleting them.
-
-## How to Start
+3. How to Start
 To start the command interpreter, simply run the `console.py` script from the terminal:
 ```
 ./console.py
@@ -202,44 +120,73 @@ To start the command interpreter, simply run the `console.py` script from the te
 ## Usage
 Once the command interpreter is running, you can enter commands to interact with hbnb objects. The available commands include:
 
-- create: Create a new object
-- show: Retrieve an object
-- update: Update attributes of an object
-- destroy: Delete an object
-- all: Retrieve all objects of a certain type
-- count: Count the number of objects of a certain type
-- quit: Exit the command interpreter
+- help: Display the help men
+- quit: Exit the interpreter
+- create <ClassName>: Create a new instance of a class
+- show <ClassName> <id>: Display the string representation of an instance
+- destroy <ClassName> <id>: Delete an instance
+- all [<ClassName>]: Display all instances of a class, or all instances if no class is specified
+- update <ClassName> <id> <attribute_name> <attribute_value>: Update an instance’s attribute
 
 ### Example
-Create a new user:
+Create a new instance of a class:
 ```
-(hbnb) create User
-```
-
-Show details of a specific user:
-```
-(hbnb) show User 1234-5678
+(hbnb) create BaseModel
 ```
 
-Update the name attribute of a user:
+Show all instances of a class:
 ```
-(hbnb) update User 1234-5678 name "John Doe"
+(hbnb) all BaseModel
 ```
 
-### Examples
+Show a specific instance by ID:
 ```
-$ ./console.py
-(hbnb) create User
-6f9307b1-1104-4c3c-843c-d1f0ec34f88d
-(hbnb) show User 6f9307b1-1104-4c3c-843c-d1f0ec34f88d
-[User] (6f9307b1-1104-4c3c-843c-d1f0ec34f88d) {'id': '6f9307b1-1104-4c3c-843c-d1f0ec34f88d'}
-(hbnb) update User 6f9307b1-1104-4c3c-843c-d1f0ec34f88d first_name "John"
-(hbnb) show User 6f9307b1-1104-4c3c-843c-d1f0ec34f88d
-[User] (6f9307b1-1104-4c3c-843c-d1f0ec34f88d) {'id': '6f9307b1-1104-4c3c-843c-d1f0ec34f88d', 'first_name': 'John'}
-(hbnb) all User
-["[User] (6f9307b1-1104-4c3c-843c-d1f0ec34f88d) {'id': '6f9307b1-1104-4c3c-843c-d1f0ec34f88d', 'first_name': 'John'}"]
+(hbnb) show BaseModel 1234-5678-9012
+```
+
+Update an instance:
+```
+(hbnb) update BaseModel 1234-5678-9012 name "New Name"
+```
+
+Destroy an instance:
+```
+(hbnb) destroy BaseModel 1234-5678-9012
+```
+
+Retrieve all instances of a class by class name:
+```
+(hbnb) User.all()
+```
+
+Retrieve the number of instances of a class:
+```
+(hbnb) User.count()
+```
+
+Retrieve an instance based on its ID:
+```
+(hbnb) User.show("1234-5678-9012")
+```
+
+Destroy an instance based on its ID:
+```
+(hbnb) User.destroy("1234-5678-9012")
+```
+
+Update an instance based on its ID and attribute name/value:
+```
+(hbnb) User.update("1234-5678-9012", "first_name", "John")
+```
+
+Update an instance based on its ID with a dictionary:
+```
+(hbnb) User.update("1234-5678-9012", {'first_name': "John", "age": 89})
+```
+
+Exit the console:
+```
 (hbnb) quit
-$
 ```
 
 ### Sample Usage
@@ -247,20 +194,38 @@ Here's a sample session demonstrating the usage of the console:
 
 ```
 $ ./console.py
+(hbnb) help
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+
 (hbnb) create BaseModel
 49faff9a-6318-451f-87b6-910505c55907
 (hbnb) show BaseModel 49faff9a-6318-451f-87b6-910505c55907
 [BaseModel] (49faff9a-6318-451f-87b6-910505c55907) {'created_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903293), 'id': '49faff9a-6318-451f-87b6-910505c55907', 'updated_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903300)}
 (hbnb) all BaseModel
 ["[BaseModel] (49faff9a-6318-451f-87b6-910505c55907) {'created_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903293), 'id': '49faff9a-6318-451f-87b6-910505c55907', 'updated_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903300)}"]
-(hbnb) create User
-38f22813-2753-4d42-b37c-57a17f1e4f88
-(hbnb) all User
-["[User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'email': 'airbnb@mail.com', 'first_name': 'Betty', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88', 'last_name': 'Bar', 'password': 'root', 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848291)}"]
+(hbnb) User.count()
+2
+(hbnb) User.destroy("246c227a-d5c1-403d-9bc7-6a47bb9f0f68")
+(hbnb) User.count()
+1
+(hbnb) User.destroy("Bar")
+** no instance found **
+(hbnb) User.show("246c227a-d5c1-403d-9bc7-6a47bb9f0f68")
+[User] (246c227a-d5c1-403d-9bc7-6a47bb9f0f68) {'first_name': 'Betty', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611352), 'updated_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611363), 'password': '63a9f0ea7bb98050796b649e85481845', 'email': 'airbnb@mail.com', 'id': '246c227a-d5c1-403d-9bc7-6a47bb9f0f68'}
+(hbnb) User.show("Bar")
+** no instance found **
 (hbnb) exit
 $
 ```
 
+## Requirements
+
+- Python 3.8.
+- Ubuntu 20.04 LTS
+ 
 ## Supported Classes
 The application supports the following classes:
 
@@ -274,189 +239,65 @@ The application supports the following classes:
 
 ## Tasks
 
-- Task 0: Create a Python script that starts a Flask web application
-- Task 1: Create a basic Flask app
-- Task 2: Display "Hello HBNB!" on web app
-- Task 3: Display specified route
-- Task 4: Display "HBNB" if no specified route found
-- Task 5: Display template for HTML
-- Task 6: Add additional route and template
-- Task 7: Display specified status code
-- Task 8: Render dynamic content with Flask
-- Task 9: Render dynamic content from storage
-- Task 10: Update state
-- Task 11: Add route for /states
-- Task 12: Display cities by state
-- Task 13: Add route for /cities_by_states
-- Task 14: Update routes for /cities_by_states
-- Task 15: Display cities by state with specified storage
-- Task 16: Update states route with place objects
-- Task 17: Display places by city
+### More classes!
+- Write classes that inherit from BaseModel:
+  - State (models/state.py)
+    - Public class attributes:
+      - name: string (empty string)
+  - City (models/city.py)
+    - Public class attributes:
+      - state_id: string (empty string)
+      - name: string (empty string)
+  - Amenity (models/amenity.py)
+    - Public class attributes:
+      - name: string (empty string)
+  - Place (models/place.py)
+    - Public class attributes:
+      - city_id: string (empty string)
+      - user_id: string (empty string)
+      - name: string (empty string)
+      - description: string (empty string)
+      - number_rooms: integer (0)
+      - number_bathrooms: integer (0)
+      - max_guest: integer (0)
+      - price_by_night: integer (0)
+      - latitude: float (0.0)
+      - longitude: float (0.0)
+      - amenity_ids: list of string (empty list)
+  - Review (models/review.py)
+    - Public class attributes:
+      - place_id: string (empty string)
+      - user_id: string (empty string)
+      - text: string (empty string)
 
-### Task 0: Create a Python script that starts a Flask web application
-  - Initialize Flask app
-  - Run the app
-  - Check if everything is set up correctly by accessing the server
+### Console 1.0
 
-### Task 1: Create a basic Flask app
-  - Set up Flask app structure
-  - Define a basic route
-  - Test the route to ensure it returns the expected output
-
-### Task 2: Display "Hello HBNB!" on the web app
-  - Update the route to return "Hello HBNB!"
-  - Test the route to ensure it displays the correct message
-
-### Task 3: Display specified route
-  - Create a new route to display a specified message
-  - Test the new route to ensure it displays the specified message
-
-### Task 4: Display "HBNB" if no specified route found
-  - Handle cases where no specified route is found
-  - Update the app to return "HBNB" in such cases
-  - Test to ensure the app displays "HBNB" when accessing an undefined route
-
-### Task 5: Display template for HTML
-  - Create an HTML template
-  - Render the template using Flask
-  - Test to ensure the template is displayed correctly in the browser
-
-### Task 6: Add additional route and template
-  - Create a new route in the Flask app
-  - Define a new HTML template for the route
-  - Test to ensure the new route and template are working correctly
-
-### Task 7: Display specified status code
-  - Update the Flask app to return a specified HTTP status code
-  - Test to ensure the correct status code is returned when accessing the route
-
-### Task 8: Render dynamic content with Flask
-  - Update the Flask app to render dynamic content
-  - Pass variables to the HTML template
-  - Test to ensure the dynamic content is displayed correctly
-
-### Task 9: Render dynamic content from storage
-  - Integrate Flask with a storage system
-  - Retrieve dynamic content from the storage system
-  - Pass the content to the HTML template
-  - Test to ensure the content is displayed correctly
-
-### Task 10: Update state
-  - Modify the state of the application
-  - Test to ensure the state is updated correctly
-
-### Task 11: Add route for /states
-  - Create a route to display information about states
-  - Test the route to ensure it returns the expected information
-
-### Task 12: Display cities by state
-  - Retrieve information about cities based on a state
-  - Display the cities on the web app
-  - Test to ensure the correct cities are displayed for a given state
-
-### Task 13: Add route for /cities_by_states
-  - Create a route to display cities grouped by states
-  - Test the route to ensure it returns the expected information
-
-### Task 14: Update routes for /cities_by_states
-  - Modify routes to handle different HTTP methods
-  - Test the routes to ensure they handle different requests correctly
-
-### Task 15: Display cities by state with specified storage
-  - Integrate Flask with a specified storage system
-  - Retrieve cities by state from the specified storage
-  - Test to ensure the correct cities are displayed for a given state
-
-### Task 16: Update states route with place objects
-  - Modify the states route to handle place objects
-  - Test to ensure the correct place objects are displayed for a given state
-
-### Task 17: Display places by city
-  - Retrieve places based on a city
-  - Display the places on the web app
-  - Test to ensure the correct places are displayed for a given city
+- Update FileStorage to manage correctly serialization and deserialization of all our new classes: Place, State, City, Amenity and Review
+- Update command interpreter (console.py) to allow those actions: show, create, destroy, update and all with all classes created previously.
 
 ## Advanced Features
 
-### 0: Implement pagination for /cities_by_states route
-  - Paginate the list of cities displayed on the /cities_by_states route
-  - Test to ensure pagination works correctly and displays the desired number of cities per page
+### All instances by class name
+- Update command interpreter (console.py) to retrieve all instances of a class by using `<class name>.all()`
 
-### 1: Implement pagination for /states route
-  - Paginate the list of states displayed on the /states route
-  - Test to ensure pagination works correctly and displays the desired number of states per page
+### Count instances
+- Update command interpreter (console.py) to retrieve the number of instances of a class using `<class name>.count()`
 
-### 2: Create API routes
-  - Define API routes to expose data in JSON format
-  - Test the API routes to ensure they return the expected JSON data
+### Show
+- Update command interpreter (console.py) to retrieve an instance based on its ID using `<class name>.show(<id>)`
 
-### 3: Implement filters for /states route
-  - Add filters to the /states route to allow users to filter states by various criteria (e.g., name, population)
-  - Test to ensure the filters work correctly and return the expected results
+### Destroy
+- Update command interpreter (console.py) to destroy an instance based on its ID using `<class name>.destroy(<id>)`
 
-### 4: Implement filters for /cities_by_states route
-  - Add filters to the /cities_by_states route to allow users to filter cities by various criteria (e.g., name, population)
-  - Test to ensure the filters work correctly and return the expected results
+### Update
+- Update command interpreter (console.py) to update an instance based on its ID using `<class name>.update(<id>, <attribute name>, <attribute value>)`
 
-### 5: Create user authentication system
-  - Implement a user authentication system to restrict access to certain routes
-  - Test to ensure only authenticated users can access restricted routes
+### Update from dictionary
+- Update command interpreter (console.py) to update an instance based on its ID with a dictionary using `<class name>.update(<id>, <dictionary representation>)`
 
-### 6: Implement user permissions
-  - Define different levels of user permissions (e.g., admin, regular user)
-  - Restrict access to certain routes based on user permissions
-  - Test to ensure users can only access routes they have permission to access
-
-### 7: Add support for file uploads
-  - Implement functionality to allow users to upload files (e.g., images, documents)
-  - Test to ensure file uploads work correctly and files are stored properly
-
-### 8: Implement error handling
-  - Add error handling to the Flask app to gracefully handle exceptions and errors
-  - Test to ensure error messages are displayed appropriately and the app remains stable
-
-### 9: Implement logging
-  - Integrate logging functionality into the Flask app to record events and errors
-  - Test to ensure logs are generated correctly and contain useful information for debugging
-
-### 10: Implement caching
-  - Add caching functionality to the Flask app to improve performance and reduce server load
-  - Test to ensure cached data is served efficiently and accurately
-
-### 11: Implement internationalization (i18n) support
-  - Add support for multiple languages in the Flask app
-  - Test to ensure the app displays content in the user's preferred language
-
-### 12: Implement session management
-  - Manage user sessions securely in the Flask app
-  - Test to ensure sessions are created, maintained, and destroyed properly
-
-### 13: Implement CSRF protection
-  - Protect against Cross-Site Request Forgery (CSRF) attacks by implementing CSRF tokens
-  - Test to ensure CSRF protection is effective and prevents unauthorized requests
-
-### 14: Implement rate limiting
-  - Limit the number of requests a user can make to certain routes within a specified time period
-  - Test to ensure rate limiting is enforced correctly and prevents abuse
-
-### 15:
-- Implement SSL/TLS encryption
-  - Secure communication between clients and the Flask app using SSL/TLS encryption
-  - Test to ensure data is encrypted properly and transmitted securely over HTTPS
-
-### 16: Implement role-based access control (RBAC)
-  - Define roles and permissions for different user types
-  - Restrict access to routes based on user roles
-  - Test to ensure RBAC is implemented correctly and restricts access as intended
-
-### 17: Implement OAuth authentication
-  - Allow users to log in to the Flask app using OAuth providers (e.g., Google, Facebook)
-  - Test to ensure OAuth authentication works correctly and users can log in using their OAuth accounts
-
-
-### 18: Integrate payment gateway
-  - Implement functionality to accept online payments using a payment gateway (e.g., Stripe, PayPal)
-  - Test to ensure payments are processed securely and successfully, with appropriate handling of payment-related errors and notification
+### Unittests for the Console!
+- Write unit tests for all features in console.py
+- Ensure tests pass in both interactive and non-interactive mode
 
 ## Technologies Used
 
