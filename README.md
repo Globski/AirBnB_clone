@@ -26,7 +26,7 @@
 - [Acknowledgments](#acknowledgments)
 
 ## Introduction
-Welcome to the hbnb (Airbnb Clone) Project! This project aims to replicate the core functionality of the Airbnb platform. It includes a command-line interpreter (console) that interacts with JSON files to manage various objects like properties, bookings, and users. These objects are stored in JSON files, representing the backend of an Airbnb-like application. The CLI will allow users to create, retrieve, update, and delete various objects used in the hbnb application. 
+Welcome to the hbnb (Airbnb Clone) Project! This project aims to replicate the core functionality of the Airbnb platform. It includes a command-line interpreter (console) that interacts with JSON files to manage various objects like place, city, and users. These objects are stored in JSON files, representing the backend of an Airbnb-like application. The CLI will allow users to create, retrieve, update, and delete various objects used in the hbnb application. 
 
 Web static development involves creating static HTML pages and applying styles using CSS. Building the front end step-by-step by creating simple HTML static pages, style guides, and fake contents without using JavaScript. The main goal is to learn how to manipulate HTML and CSS languages.
 
@@ -79,15 +79,9 @@ The main objective of this project is to develop a scalable and functional clone
 - **CRUD Operations:** Implement CRUD (Create, read, update, and delete) operations for managing various objects (users, properties, bookings, etc.).
 - **Command-line Interface (CLI):** Implement a command-line interface (CLI) for easy interaction and management.
 - **JSON File Storage:** Integrate JSON file storage for data persistence.
-- **Backend Logic:** Develop classes for various objects (users, properties, bookings, etc.).
-- **Integration with External APIs:** Integrate external APIs for additional functionality (e.g., mapping services).
+- **Backend Logic:** Develop classes for various objects (users, place, city, etc.).
+- **Integration with External APIs:** Integrate external APIs for additional functionality.
 - **User Authentication and Authorization:** Implement user authentication and authorization.
-- **Payment Integration:** Integration with payment gateways for handling transactions.
-- **Recommendation Systems:** Implementation of recommendation systems for property suggestions.
-- **User Management:** User registration, authentication, profile management, and social authentication.
-- **Property Management:** Listing creation, media upload, availability calendar, and booking management.
-- **Booking and Reservation:** Search, filter, instant booking, reservation confirmation, and cancellation policy.
-- **Admin Dashboard:** Overview of key metrics, user and property management, and booking management.
 
 ## Learning Objectives
 
@@ -102,8 +96,7 @@ The main objective of this project is to develop a scalable and functional clone
 - What is **kwargs and how to use it
 - How to handle named arguments in a function
 
-##
-HTML, CSS, and front-end development:
+## HTML, CSS, and front-end development:
 - What is HTML
 - How to create an HTML page
 - What is a markup language
@@ -255,6 +248,18 @@ EOF  help  quit
 (hbnb) exit
 $
 ```
+## Unit Testing
+
+Unit testing ensure that individual components of the application work as expected. The unit tests are organized into different modules, each testing specific components of the application. In this project, unit tests are written using the unittest module to cover various functionalities of the application, including the models, storage, and the command interpreter (console).
+
+### Running Unit Tests
+
+To run the unit tests, use the following command from the root directory of the project:
+
+```bash
+python3 -m unittest discover tests
+```
+This command will discover and execute all test cases in the tests directory.
 
 ## Requirements
 
@@ -349,14 +354,12 @@ The application supports the following classes:
 - **SQLAlchemy**: Utilized for interacting with the database to store and retrieve data efficiently.
 - **Jinja**: Used as the Python templating engine to dynamically generate HTML pages.
 
-### Authentication
-- **OAuth**: Implemented for user authentication, enhancing security and enabling social authentication.
 
 ### Database
-- **SQL**: Used for database management and querying to store and retrieve property and user information.
+- **SQL**: Used for database management and querying to store and retrieve user information.
 
 ### Additional Tools
-- **APIs**: Integrated external APIs for functionalities such as mapping services and payment gateways.
+- **APIs**: Integrated external APIs for functionalities.
 
 ## Contributors
 This project is maintained by the following contributors:
