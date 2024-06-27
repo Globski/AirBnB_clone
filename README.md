@@ -24,7 +24,7 @@
 - [Acknowledgments](#acknowledgments)
 
 ## Introduction
-Welcome to the hbnb (Airbnb Clone) Project! This project aims to replicate the core functionality of the Airbnb platform. It includes a command-line interpreter (console) that interacts with JSON files to manage various objects like place, city, and users. These objects are stored in JSON files, representing the backend of an Airbnb-like application. The CLI will allow users to create, retrieve, update, and delete various objects used in the hbnb application. 
+Welcome to the hbnb (Airbnb Clone) Project! This project aims to replicate the core functionality of the Airbnb platform. It includes a command-line interpreter (console) that interacts with JSON files to manage various objects like place, city, and users. These objects are stored in JSON files, representing the backend of an Airbnb-like application. The CLI provides an interface to create, retrieve, update, and delete various objects in the system, including users, places, cities, states, amenities, and reviews. This is essential for developers to test and manage the application's data.
 
 Web static development involves creating static HTML pages and applying styles using CSS. Building the front end step-by-step by creating simple HTML static pages, style guides, and fake contents without using JavaScript. The main goal is to learn how to manipulate HTML and CSS languages.
 
