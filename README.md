@@ -5,8 +5,6 @@
 ![JavaScript](https://img.shields.io/badge/language-JavaScript-yellow.svg)
 ![SQL](https://img.shields.io/badge/language-SQL-red.svg)
 
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-
 ## Table of Contents
 
 - [Introduction](#introduction)
