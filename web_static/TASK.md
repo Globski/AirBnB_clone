@@ -291,3 +291,56 @@ Write an HTML page that displays a header, footer, and a filters box with dropdo
 
 ---
 
+# Task 7: Display Results
+
+Write an HTML page that displays a header, footer, a filters box with dropdown, and results.
+
+### Layout: (based on 6-index.html)
+
+**Add Places Section:**
+- Tag: `<section>`
+  - `class="places"`
+  - Same level as the filters section, inside `.container`
+
+**Contains a Title:**
+- Tag: `<h1>`
+  - Text: "Places"
+  - Align in the top left
+  - Font size: 30px
+
+**Contains Multiple “Places” as Listings (horizontal or vertical):**
+- Tag: `<article>`
+  - Width: 390px
+  - Padding and margin: 20px
+  - Border: 1px solid #FF5A5F with border-radius: 4px
+
+**Contains the Place Name:**
+- Tag: `<h2>`
+  - Font size: 30px
+  - Center horizontally
+
+### Requirements:
+
+- You must use: `<header>`, `<footer>`, `<section>`, `<article>`, `<button>`, `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<ul>`, and `<li>` tags  
+- No inline styles  
+- You are not allowed to use the `<img>` tag  
+- You are not allowed to use the `<style>` tag in the `<head>` tag  
+- All images must be stored in the `images` folder  
+- You must have **5 CSS files**:
+  - `styles/4-common.css`: for the global style (i.e. body and `.container` styles)
+  - `styles/3-header.css`: for the header style
+  - `styles/3-footer.css`: for the footer style
+  - `styles/6-filters.css`: for the filters style
+  - `styles/7-places.css`: for the places style
+
+<img width="2160" alt="bca4d17fbe21a58b66a9d5d6b85df4801d147dd0" src="https://github.com/user-attachments/assets/2db87fce-b34d-4f42-937c-619b9730fcaa">
+
+
+**Repo:**
+
+- GitHub repository: AirBnB_clone  
+- Directory: web_static  
+- File: 7-index.html, `styles/4-common.css`, `styles/3-header.css`, `styles/3-footer.css`, `styles/6-filters.css`, `styles/7-places.css`, `images/`
+
+---
+
