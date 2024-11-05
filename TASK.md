@@ -1,7 +1,6 @@
 # Tasks
 
 ## 0. README, AUTHORS
-**mandatory**
 
 - **Write a `README.md`:**
   - Description of the project
@@ -23,7 +22,6 @@
 
 ---
 ## 1. Be pycodestyle compliant!
-**mandatory**
 
 - **Write beautiful code that passes the `pycodestyle` checks.**
 
@@ -80,8 +78,6 @@ OK
 ---
 
 ## 3. BaseModel
-**mandatory**
-
 
 Write a class `BaseModel` that defines all common attributes/methods for other classes:
 
@@ -156,7 +152,6 @@ guillaume@ubuntu:~/AirBnB$
 ---
 
 ## 4. Create BaseModel from dictionary
-**mandatory**
 
 Previously, we created a method (`to_dict()`) to generate a dictionary representation of an instance.
 
@@ -245,8 +240,6 @@ guillaume@ubuntu:~/AirBnB$
 ---
 
 ## 5: Store first object
-
-**mandatory**
 
 Now we can recreate a `BaseModel` from another one by using its dictionary representation:
 
@@ -351,63 +344,378 @@ guillaume@ubuntu:~/AirBnB$
 - GitHub repository: `AirBnB_clone`
 - Files: `models/engine/file_storage.py`, `models/engine/__init__.py`, `models/__init__.py`, `models/base_model.py`, `tests/`
 
+## 7: Console 0.1
 
-### More classes!
-- Write classes that inherit from BaseModel:
-  - State (models/state.py)
-    - Public class attributes:
-      - name: string (empty string)
-  - City (models/city.py)
-    - Public class attributes:
-      - state_id: string (empty string)
-      - name: string (empty string)
-  - Amenity (models/amenity.py)
-    - Public class attributes:
-      - name: string (empty string)
-  - Place (models/place.py)
-    - Public class attributes:
-      - city_id: string (empty string)
-      - user_id: string (empty string)
-      - name: string (empty string)
-      - description: string (empty string)
-      - number_rooms: integer (0)
-      - number_bathrooms: integer (0)
-      - max_guest: integer (0)
-      - price_by_night: integer (0)
-      - latitude: float (0.0)
-      - longitude: float (0.0)
-      - amenity_ids: list of string (empty list)
-  - Review (models/review.py)
-    - Public class attributes:
-      - place_id: string (empty string)
-      - user_id: string (empty string)
-      - text: string (empty string)
+Update your command interpreter (`console.py`) to have these commands:
 
-### Console 1.0
+1. **create**: Creates a new instance of `BaseModel`, saves it (to the JSON file), and prints the `id`. 
+   - Ex: `$ create BaseModel`
+   - If the class name is missing, print **class name missing** (Ex: `$ create`)
+   - If the class name doesn’t exist, print **class doesn't exist** (Ex: `$ create MyModel`)
 
-- Update FileStorage to manage correctly serialization and deserialization of all our new classes: Place, State, City, Amenity and Review
-- Update command interpreter (console.py) to allow those actions: show, create, destroy, update and all with all classes created previously.
+2. **show**: Prints the string representation of an instance based on the class name and `id`.
+   - Ex: `$ show BaseModel 1234-1234-1234`
+   - If the class name is missing, print **class name missing** (Ex: `$ show`)
+   - If the class name doesn’t exist, print **class doesn't exist** (Ex: `$ show MyModel`)
+   - If the `id` is missing, print **instance id missing** (Ex: `$ show BaseModel`)
+   - If the instance of the class name doesn’t exist for the `id`, print **no instance found** (Ex: `$ show BaseModel 121212`)
 
-## Advanced Features
+3. **destroy**: Deletes an instance based on the class name and `id` (saves the change into the JSON file).
+   - Ex: `$ destroy BaseModel 1234-1234-1234`
+   - If the class name is missing, print **class name missing** (Ex: `$ destroy`)
+   - If the class name doesn’t exist, print **class doesn't exist** (Ex: `$ destroy MyModel`)
+   - If the `id` is missing, print **instance id missing** (Ex: `$ destroy BaseModel`)
+   - If the instance of the class name doesn’t exist for the `id`, print **no instance found** (Ex: `$ destroy BaseModel 121212`)
 
-### All instances by class name
-- Update command interpreter (console.py) to retrieve all instances of a class by using `<class name>.all()`
+4. **all**: Prints all string representation of all instances based or not on the class name.
+   - Ex: `$ all BaseModel` or `$ all`
+   - The printed result must be a list of strings (like the example below)
+   - If the class name doesn’t exist, print **class doesn't exist** (Ex: `$ all MyModel`)
 
-### Count instances
-- Update command interpreter (console.py) to retrieve the number of instances of a class using `<class name>.count()`
+5. **update**: Updates an instance based on the class name and `id` by adding or updating an attribute (saves the change into the JSON file).
+   - Ex: `$ update BaseModel 1234-1234-1234 email "aibnb@mail.com"`
+   - Usage: `update <class name> <id> <attribute name> "<attribute value>"`
+   - Only one attribute can be updated at a time.
+   - You can assume the attribute name is valid (exists for this model).
+   - The attribute value must be cast to the attribute type.
+   - If the class name is missing, print **class name missing** (Ex: `$ update`)
+   - If the class name doesn’t exist, print **class doesn't exist** (Ex: `$ update MyModel`)
+   - If the `id` is missing, print **instance id missing** (Ex: `$ update BaseModel`)
+   - If the instance of the class name doesn’t exist for the `id`, print **no instance found** (Ex: `$ update BaseModel 121212`)
+   - If the attribute name is missing, print **attribute name missing** (Ex: `$ update BaseModel existing-id`)
+   - If the value for the attribute name doesn’t exist, print **value missing** (Ex: `$ update BaseModel existing-id first_name`)
+   - All other arguments should not be used (Ex: `$ update BaseModel 1234-1234-1234 email "aibnb@mail.com" first_name "Betty"` = `$ update BaseModel 1234-1234-1234 email "aibnb@mail.com"`).
+   - `id`, `created_at`, and `updated_at` can’t be updated. You can assume they won’t be passed in the update command.
+   - Only “simple” arguments can be updated: string, integer, and float. You can assume nobody will try to update lists of ids or datetime.
 
-### Show
-- Update command interpreter (console.py) to retrieve an instance based on its ID using `<class name>.show(<id>)`
+### Error Management:
+- Arguments are always in the right order.
+- Each argument is separated by a space.
+- A string argument with a space must be between double quotes.
+- The error management starts from the first argument to the last one.
 
-### Destroy
-- Update command interpreter (console.py) to destroy an instance based on its ID using `<class name>.destroy(<id>)`
+### Example Interaction:
 
-### Update
-- Update command interpreter (console.py) to update an instance based on its ID using `<class name>.update(<id>, <attribute name>, <attribute value>)`
+```bash
+guillaume@ubuntu:~/AirBnB$ ./console.py
+(hbnb) all MyModel
+** class doesn't exist **
+(hbnb) show BaseModel
+** instance id missing **
+(hbnb) show BaseModel My_First_Model
+** no instance found **
+(hbnb) create BaseModel
+49faff9a-6318-451f-87b6-910505c55907
+(hbnb) all BaseModel
+["[BaseModel] (49faff9a-6318-451f-87b6-910505c55907) {'created_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903293), 'id': '49faff9a-6318-451f-87b6-910505c55907', 'updated_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903300)}"]
+(hbnb) show BaseModel 49faff9a-6318-451f-87b6-910505c55907
+[BaseModel] (49faff9a-6318-451f-87b6-910505c55907) {'created_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903293), 'id': '49faff9a-6318-451f-87b6-910505c55907', 'updated_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903300)}
+(hbnb) destroy
+** class name missing **
+(hbnb) update BaseModel 49faff9a-6318-451f-87b6-910505c55907 first_name "Betty"
+(hbnb) show BaseModel 49faff9a-6318-451f-87b6-910505c55907
+[BaseModel] (49faff9a-6318-451f-87b6-910505c55907) {'first_name': 'Betty', 'id': '49faff9a-6318-451f-87b6-910505c55907', 'created_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903293), 'updated_at': datetime.datetime(2017, 10, 2, 3, 11, 3, 49401)}
+(hbnb) create BaseModel
+2dd6ef5c-467c-4f82-9521-a772ea7d84e9
+(hbnb) all BaseModel
+["[BaseModel] (2dd6ef5c-467c-4f82-9521-a772ea7d84e9) {'id': '2dd6ef5c-467c-4f82-9521-a772ea7d84e9', 'created_at': datetime.datetime(2017, 10, 2, 3, 11, 23, 639717), 'updated_at': datetime.datetime(2017, 10, 2, 3, 11, 23, 639724)}", "[BaseModel] (49faff9a-6318-451f-87b6-910505c55907) {'first_name': 'Betty', 'id': '49faff9a-6318-451f-87b6-910505c55907', 'created_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903293), 'updated_at': datetime.datetime(2017, 10, 2, 3, 11, 3, 49401)}"]
+(hbnb) destroy BaseModel 49faff9a-6318-451f-87b6-910505c55907
+(hbnb) show BaseModel 49faff9a-6318-451f-87b6-910505c55907
+** no instance found **
+(hbnb)
+```
 
-### Update from dictionary
-- Update command interpreter (console.py) to update an instance based on its ID with a dictionary using `<class name>.update(<id>, <dictionary representation>)`
+No unittests needed
 
-### Unittests for the Console!
-- Write unit tests for all features in console.py
-- Ensure tests pass in both interactive and non-interactive mode
+---
+
+### Repo:
+- GitHub repository: `AirBnB_clone`
+- Files: `console.py`
+
+## 8. First User
+
+1. **Create a class `User`** that inherits from `BaseModel` in `models/user.py`.
+   
+   **Public class attributes**:
+   - `email: string` - empty string
+   - `password: string` - empty string
+   - `first_name: string` - empty string
+   - `last_name: string` - empty string
+
+2. **Update `FileStorage`** to manage the correct serialization and deserialization of the `User` class.
+
+3. **Update your command interpreter (`console.py`)** to allow:
+   - `show`
+   - `create`
+   - `destroy`
+   - `update`
+   - `all`
+   
+   These commands should work for the `User` class as they do for `BaseModel`.
+
+---
+
+### Example:
+
+```bash
+guillaume@ubuntu:~/AirBnB$ cat test_save_reload_user.py
+#!/usr/bin/python3
+from models import storage
+from models.base_model import BaseModel
+from models.user import User
+
+all_objs = storage.all()
+print("-- Reloaded objects --")
+for obj_id in all_objs.keys():
+    obj = all_objs[obj_id]
+    print(obj)
+
+print("-- Create a new User --")
+my_user = User()
+my_user.first_name = "Betty"
+my_user.last_name = "Bar"
+my_user.email = "airbnb@mail.com"
+my_user.password = "root"
+my_user.save()
+print(my_user)
+
+print("-- Create a new User 2 --")
+my_user2 = User()
+my_user2.first_name = "John"
+my_user2.email = "airbnb2@mail.com"
+my_user2.password = "root"
+my_user2.save()
+print(my_user2)
+
+guillaume@ubuntu:~/AirBnB$ cat file.json ; echo ""
+{"BaseModel.2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4": {"__class__": "BaseModel", "id": "2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4", "updated_at": "2017-09-28T21:11:14.333862", "created_at": "2017-09-28T21:11:14.333852"}, "BaseModel.a42ee380-c959-450e-ad29-c840a898cfce": {"__class__": "BaseModel", "id": "a42ee380-c959-450e-ad29-c840a898cfce", "updated_at": "2017-09-28T21:11:15.504296", "created_at": "2017-09-28T21:11:15.504287"}, "BaseModel.af9b4cbd-2ce1-4e6e-8259-f578097dd15f": {"__class__": "BaseModel", "id": "af9b4cbd-2ce1-4e6e-8259-f578097dd15f", "updated_at": "2017-09-28T21:11:12.971544", "created_at": "2017-09-28T21:11:12.971521"}, "BaseModel.38a22b25-ae9c-4fa9-9f94-59b3eb51bfba": {"__class__": "BaseModel", "id": "38a22b25-ae9c-4fa9-9f94-59b3eb51bfba", "updated_at": "2017-09-28T21:11:13.753347", "created_at": "2017-09-28T21:11:13.753337"}, "BaseModel.9bf17966-b092-4996-bd33-26a5353cccb4": {"__class__": "BaseModel", "id": "9bf17966-b092-4996-bd33-26a5353cccb4", "updated_at": "2017-09-28T21:11:14.963058", "created_at": "2017-09-28T21:11:14.963049"}}
+guillaume@ubuntu:~/AirBnB$
+guillaume@ubuntu:~/AirBnB$ ./test_save_reload_user.py
+-- Reloaded objects --
+[BaseModel] (38a22b25-ae9c-4fa9-9f94-59b3eb51bfba) {'id': '38a22b25-ae9c-4fa9-9f94-59b3eb51bfba', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 13, 753337), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 13, 753347)}
+[BaseModel] (9bf17966-b092-4996-bd33-26a5353cccb4) {'id': '9bf17966-b092-4996-bd33-26a5353cccb4', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 14, 963049), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 14, 963058)}
+[BaseModel] (2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4) {'id': '2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 14, 333852), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 14, 333862)}
+[BaseModel] (a42ee380-c959-450e-ad29-c840a898cfce) {'id': 'a42ee380-c959-450e-ad29-c840a898cfce', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 15, 504287), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 15, 504296)}
+[BaseModel] (af9b4cbd-2ce1-4e6e-8259-f578097dd15f) {'id': 'af9b4cbd-2ce1-4e6e-8259-f578097dd15f', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 12, 971521), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 12, 971544)}
+-- Create a new User --
+[User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'id': '38f22813-2753-4d42-b37c-57a17f1e4f88', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848291), 'email': 'airbnb@mail.com', 'first_name': 'Betty', 'last_name': 'Bar', 'password': 'root'}
+-- Create a new User 2 --
+[User] (d0ef8146-4664-4de5-8e89-096d667b728e) {'id': 'd0ef8146-4664-4de5-8e89-096d667b728e', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848280), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848294), 'email': 'airbnb2@mail.com', 'first_name': 'John', 'password': 'root'}
+guillaume@ubuntu:~/AirBnB$
+guillaume@ubuntu:~/AirBnB$ cat file.json ; echo ""
+{"BaseModel.af9b4cbd-2ce1-4e6e-8259-f578097dd15f": {"id": "af9b4cbd-2ce1-4e6e-8259-f578097dd15f", "updated_at": "2017-09-28T21:11:12.971544", "created_at": "2017-09-28T21:11:12.971521", "__class__": "BaseModel"}, "BaseModel.38a22b25-ae9c-4fa9-9f94-59b3eb51bfba": {"id": "38a22b25-ae9c-4fa9-9f94-59b3eb51bfba", "updated_at": "2017-09-28T21:11:13.753347", "created_at":
+
+ "2017-09-28T21:11:13.753337", "__class__": "BaseModel"}, "BaseModel.9bf17966-b092-4996-bd33-26a5353cccb4": {"id": "9bf17966-b092-4996-bd33-26a5353cccb4", "updated_at": "2017-09-28T21:11:14.963058", "created_at": "2017-09-28T21:11:14.963049", "__class__": "BaseModel"}, "BaseModel.a42ee380-c959-450e-ad29-c840a898cfce": {"id": "a42ee380-c959-450e-ad29-c840a898cfce", "updated_at": "2017-09-28T21:11:15.504296", "created_at": "2017-09-28T21:11:15.504287", "__class__": "BaseModel"}, "BaseModel.2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4": {"id": "2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4", "updated_at": "2017-09-28T21:11:14.333862", "created_at": "2017-09-28T21:11:14.333852", "__class__": "BaseModel"}, "User.38f22813-2753-4d42-b37c-57a17f1e4f88": {"id": "38f22813-2753-4d42-b37c-57a17f1e4f88", "created_at": "2017-09-28T21:11:42.848279", "updated_at": "2017-09-28T21:11:42.848291", "email": "airbnb@mail.com", "first_name": "Betty", "last_name": "Bar", "password": "root", "__class__": "User"}, "User.d0ef8146-4664-4de5-8e89-096d667b728e": {"id": "d0ef8146-4664-4de5-8e89-096d667b728e", "created_at": "2017-09-28T21:11:42.848280", "updated_at": "2017-09-28T21, 11:42.848294", "email": "airbnb2@mail.com", "first_name": "John", "password": "root", "__class__": "User"}}
+guillaume@ubuntu:~/AirBnB$ 
+```
+
+No unittests needed for the console
+
+--- 
+
+### Repo:
+- GitHub repository: `AirBnB_clone`
+- Files: `models/user.py`, `models/engine/file_storage.py`, `console.py`, `tests/`
+
+---
+
+## 9. More Classes!
+
+Write all the following classes that inherit from `BaseModel`:
+
+1. **State** (`models/state.py`):
+   - **Public class attribute**:
+     - `name: string` - empty string
+
+2. **City** (`models/city.py`):
+   - **Public class attributes**:
+     - `state_id: string` - empty string (will reference the `State.id`)
+     - `name: string` - empty string
+
+3. **Amenity** (`models/amenity.py`):
+   - **Public class attribute**:
+     - `name: string` - empty string
+
+4. **Place** (`models/place.py`):
+   - **Public class attributes**:
+     - `city_id: string` - empty string (will reference the `City.id`)
+     - `user_id: string` - empty string (will reference the `User.id`)
+     - `name: string` - empty string
+     - `description: string` - empty string
+     - `number_rooms: integer` - 0
+     - `number_bathrooms: integer` - 0
+     - `max_guest: integer` - 0
+     - `price_by_night: integer` - 0
+     - `latitude: float` - 0.0
+     - `longitude: float` - 0.0
+     - `amenity_ids: list of string` - empty list (to later reference the `Amenity.id`)
+
+5. **Review** (`models/review.py`):
+   - **Public class attributes**:
+     - `place_id: string` - empty string (will reference the `Place.id`)
+     - `user_id: string` - empty string (will reference the `User.id`)
+     - `text: string` - empty string
+
+---
+
+### Repo:
+
+- GitHub repository: `AirBnB_clone`
+- Files:
+  - `models/state.py`
+  - `models/city.py`
+  - `models/amenity.py`
+  - `models/place.py`
+  - `models/review.py`
+  - `tests/`
+
+---
+
+## 10. Console 1.0
+
+1. **Update `FileStorage`**:
+   - Modify the `FileStorage` class to handle the correct serialization and deserialization of the newly created classes:
+     - `Place`
+     - `State`
+     - `City`
+     - `Amenity`
+     - `Review`
+
+2. **Update the command interpreter (`console.py`)**:
+   - Modify the command interpreter to allow the following actions for all previously created classes:
+     - `show`
+     - `create`
+     - `destroy`
+     - `update`
+     - `all`
+
+3. **No unittests needed for the console**.
+
+---
+
+### Repo:
+
+- GitHub repository: `AirBnB_clone`
+- Files:
+  - `console.py`
+  - `models/engine/file_storage.py`
+  - `tests/`
+
+---
+
+## 11. All instances by class name
+
+- Update your command interpreter (`console.py`) to enable retrieving all instances of a class by using the following command syntax:
+
+  ```bash
+  <class_name>.all()
+  ```
+
+  For example:
+
+  ```bash
+  (hbnb) User.all()
+  ```
+
+  This should display all instances of the `User` class stored in memory.
+
+### Example:
+
+```bash
+guillaume@ubuntu:~/AirBnB$ ./console.py
+(hbnb) User.all()
+[[User] (246c227a-d5c1-403d-9bc7-6a47bb9f0f68) {'first_name': 'Betty', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611352), 'updated_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611363), 'password': '63a9f0ea7bb98050796b649e85481845', 'email': 'airbnb@mail.com', 'id': '246c227a-d5c1-403d-9bc7-6a47bb9f0f68'}, [User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'first_name': 'Betty', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848291), 'password': 'b9be11166d72e9e3ae7fd407165e4bd2', 'email': 'airbnb@mail.com', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88'}]
+```
+
+### No unittests needed.
+
+---
+
+### Repo:
+
+- GitHub repository: `AirBnB_clone`
+- File: `console.py`
+
+---
+
+## 12. Count instances
+
+- Update your command interpreter (`console.py`) to allow retrieving the number of instances of a class using the following syntax:
+
+  ```bash
+  <class_name>.count()
+  ```
+
+  For example:
+
+  ```bash
+  (hbnb) User.count()
+  ```
+
+  This should return the number of instances of the `User` class.
+
+### Example:
+
+```bash
+guillaume@ubuntu:~/AirBnB$ ./console.py
+(hbnb) User.count()
+2
+```
+
+This command will display the number of `User` instances stored in memory.
+
+### No unittests needed.
+
+---
+
+### Repo:
+
+- GitHub repository: `AirBnB_clone`
+- File: `console.py`
+
+---
+
+## 13. Show
+
+- Update your command interpreter (`console.py`) to retrieve an instance based on its ID using the following syntax:
+
+  ```bash
+  <class_name>.show(<id>)
+  ```
+
+  For example:
+
+  ```bash
+  (hbnb) User.show("246c227a-d5c1-403d-9bc7-6a47bb9f0f68")
+  ```
+
+  This should display the instance of the class with the specified ID.
+
+- Error management must behave as it has for previous commands. If an invalid ID is provided (e.g., an ID not found), the interpreter should return an error message like:
+
+  ```bash
+  ** no instance found **
+  ```
+
+### Example:
+
+```bash
+guillaume@ubuntu:~/AirBnB$ ./console.py
+(hbnb) User.show("246c227a-d5c1-403d-9bc7-6a47bb9f0f68")
+[User] (246c227a-d5c1-403d-9bc7-6a47bb9f0f68) {'first_name': 'Betty', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611352), 'updated_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611363), 'password': '63a9f0ea7bb98050796b649e85481845', 'email': 'airbnb@mail.com', 'id': '246c227a-d5c1-403d-9bc7-6a47bb9f0f68'}
+(hbnb) User.show("Bar")
+** no instance found **
+```
+
+### No unittests needed.
+
+---
+
+### Repo:
+
+- GitHub repository: `AirBnB_clone`
+- File: `console.py`
+
+---
+
