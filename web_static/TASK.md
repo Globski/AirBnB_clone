@@ -243,3 +243,51 @@ Write an HTML page that displays a header, footer, and a filters box.
 
 ---
 
+# Task 6: It's (h)over
+
+Write an HTML page that displays a header, footer, and a filters box with dropdown.
+
+### Layout: (based on 5-index.html)
+
+**Update Locations and Amenities Filters to Display a Contextual Dropdown:**
+
+- **Tag:** `<ul>`
+  - `class="popover"`
+  - Text should be fake for now
+  - Inside each filter `<div>`
+  - **Not displayed by default**
+  - Background color: #FAFAFA
+  - Width: same as the div filter
+  - Border: 1px solid #DDDDDD with border-radius: 4px
+  - No list-style display
+  
+- **Location Filter has 2 levels of `<ul>`/`<li>`:**
+  - State -> Cities
+  - The state name should be displayed in an `<h2>` tag with font size 16px
+
+### Requirements:
+
+- You must use: `<header>`, `<footer>`, `<section>`, `<button>`, `<h3>`, `<h4>`, `<ul>`, and `<li>` tags  
+- No inline styles  
+- You are not allowed to use the `<img>` tag  
+- You are not allowed to use the `<style>` tag in the `<head>` tag  
+- All images must be stored in the `images` folder  
+- You must have **4 CSS files**:
+  - `styles/4-common.css`: for the global style (body and `.container` styles)
+  - `styles/3-header.css`: for the header style
+  - `styles/3-footer.css`: for the footer style
+  - `styles/6-filters.css`: for the filters style
+
+<img width="2160" alt="6262f13624dca23ca19db505c44f88faddb82ebb" src="https://github.com/user-attachments/assets/a3e10fdc-04b6-49ec-b7fe-07d41d9614f5">
+
+<img width="2160" alt="6e6bdfa13fa88a5f439d9e2b1dade826dd95529b" src="https://github.com/user-attachments/assets/327ecbac-78a1-48e6-9838-cffb8baa6672">
+
+
+**Repo:**
+
+- GitHub repository: AirBnB_clone  
+- Directory: web_static  
+- File: 6-index.html, `styles/4-common.css`, `styles/3-header.css`, `styles/3-footer.css`, `styles/6-filters.css`, `images/`
+
+---
+
