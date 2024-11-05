@@ -6,25 +6,6 @@
 ![SQL](https://img.shields.io/badge/language-SQL-red.svg)
 ![65f4a1dd9c51265f49d0](https://github.com/user-attachments/assets/0f1f1be0-d23d-4029-83e6-11a17532be61)
 
-
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Objective](#objective)
-- [Project Structure](#project-structure)
-- [Features](#features)
-- [Learning Objectives](#learning-objectives)
-- [Command Interpreter](#command-interpreter)
-- [Getting Started](#getting-started)
-  - [Installation](#installation)
-  - [Usage](#usage)
-- [Tasks](#tasks)
-- [Advanced Features](#advanced-features)
-- [Technologies Used](#technologies-used)
-- [Contributors](#contributors)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
-
 ## Introduction
 Welcome to the hbnb (Airbnb Clone) Project! This project aims to replicate the core functionality of the Airbnb platform. It includes a command-line interpreter (console) that interacts with JSON files to manage various objects like place, city, and users. These objects are stored in JSON files, representing the backend of an Airbnb-like application. The CLI provides an interface to create, retrieve, update, and delete various objects in the system, including users, places, cities, states, amenities, and reviews. This is essential for developers to test and manage the application's data.
 
