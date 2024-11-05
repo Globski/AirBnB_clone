@@ -59,21 +59,6 @@ The main objective of this project is to develop a scalable and functional clone
 - What is **kwargs and how to use it
 - How to handle named arguments in a function
 
-## HTML, CSS, and front-end development:
-- What is HTML
-- How to create an HTML page
-- What is a markup language
-- What is the DOM
-- What is an element / tag
-- What is an attribute
-- How does the browser load a webpage
-- What is CSS
-- How to add style to an element
-- What is a class
-- What is a selector
-- How to compute CSS Specificity Value
-- What are Box properties in CSS
-
 ## Command Interpreter
 
 The command interpreter is a Python-based CLI that provides a shell for interacting with hbnb objects. It allows users to perform various operations on objects, such as creating, retrieving, updating, and deleting them. It supports the following functionalities:
