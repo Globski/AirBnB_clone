@@ -130,3 +130,67 @@ Write an HTML page that displays a header and footer by using CSS files (same as
 - File: 3-index.html, `styles/3-common.css`, `styles/3-header.css`, `styles/3-footer.css`, `images/`
 
 ---
+
+# Task 4: Search!
+
+Write an HTML page that displays a header, footer, and a filters box with a search button.
+
+### Layout: (based on 3-index.html)
+
+**Container:**
+- Between `<header>` and `<footer>` tags, add a `<div>`:
+  - `class="container"`
+  - Max width: 1000px
+  - Margin top and bottom: 30px (it should be 30px under the bottom of the header)
+  - Center horizontally  
+
+**Filter Section:**
+- `<section>` tag
+  - `class="filters"`
+  - Inside the `.container`
+  - Color: white
+  - Height: 70px
+  - Width: 100% of the container
+  - Border: 1px solid #DDDDDD with radius 4px  
+
+**Search Button:**
+- `<button>` tag
+  - Text: "Search"
+  - Font size: 18px
+  - Inside the `.filters` section
+  - Background color: #FF5A5F
+  - Text color: #FFFFFF
+  - Height: 48px
+  - Width: 20% of the `.filters` section
+  - No borders
+  - Border radius: 4px
+  - Center vertically and 30px from the right border
+  - Change opacity to 90% when the mouse hovers over the button  
+
+### Requirements:
+
+- You must use: `<header>`, `<footer>`, `<section>`, and `<button>` tags  
+- No inline styles  
+- You are not allowed to use the `<img>` tag  
+- You are not allowed to use the `<style>` tag in the `<head>` tag  
+- All images must be stored in the `images` folder  
+- You must have **4 CSS files**:
+  - `styles/4-common.css`: for the global style (body and `.container` styles)
+  - `styles/3-header.css`: for the header style
+  - `styles/3-footer.css`: for the footer style
+  - `styles/4-filters.css`: for the filters style
+
+**Note:**  
+- `4-index.html` won’t be W3C valid, don’t worry, it’s temporary.
+
+<img width="2160" alt="f959154b0cdf1cdf71ddef04e3787ef28462793e" src="https://github.com/user-attachments/assets/c4bd02cf-1cbe-4b53-a46e-c8cd1e15dd4b">
+
+
+**Repo:**
+
+- GitHub repository: AirBnB_clone  
+- Directory: web_static  
+- File: 4-index.html, `styles/4-common.css`, `styles/3-header.css`, `styles/3-footer.css`, `styles/4-filters.css`, `images/`
+
+---
+
