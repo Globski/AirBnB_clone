@@ -7,7 +7,7 @@
 ![65f4a1dd9c51265f49d0](https://github.com/user-attachments/assets/0f1f1be0-d23d-4029-83e6-11a17532be61)
 
 ## Introduction
-Welcome to the hbnb (Airbnb Clone) Project! This project aims to replicate the core functionality of the Airbnb platform. It includes a command-line interpreter (console) that interacts with JSON files to manage various objects like place, city, and users. These objects are stored in JSON files, representing the backend of an Airbnb-like application. The CLI provides an interface to create, retrieve, update, and delete various objects in the system, including users, places, cities, states, amenities, and reviews. This is essential for developers to test and manage the application's data.
+Welcome to the **hbnb (Airbnb Clone) Project**! This project aims to replicate the core functionality of the Airbnb platform. It includes a **command-line interpreter (CLI)** (console)** that allows you to interact with the application’s data(objects). The data is stored in **JSON files** and represents the backend of an Airbnb-like application. The CLI lets you manage various objects in the system, such as Users**, Places**, Cities**, States**, Amenities**, and Reviews**. With this tool, you can **create**, **retrieve**, **update**, and **delete** these objects. This functionality is important for developers to test and manage the application's data as they build and refine the system.
 
 ## Objective
 
@@ -36,7 +36,6 @@ The main objective of this project is to develop a scalable and functional clone
 | **16. Update from dictionary** | Update command interpreter to update an instance based on its ID with a dictionary using `<class name>.update(<id>, <dictionary representation>)`. | [GitHub repository: AirBnB_clone](https://github.com/username/repo), [File: console.py](https://github.com/username/repo/console.py), [tests/test_console.py](https://github.com/username/repo/tests/test_console.py) |
 | **17. Unittests for the Console!** | Write all unittests for console.py, covering all features. | [GitHub repository: AirBnB_clone](https://github.com/username/repo), [File: tests/test_console.py](https://github.com/username/repo)
 
-
 ## Features
 
 - **CRUD Operations:** Implement CRUD (Create, read, update, and delete) operations for managing various objects (users, properties, bookings, etc.).
@@ -45,6 +44,23 @@ The main objective of this project is to develop a scalable and functional clone
 - **Backend Logic:** Develop classes for various objects (users, place, city, etc.).
 - **Integration with External APIs:** Integrate external APIs for additional functionality.
 - **User Authentication and Authorization:** Implement user authentication and authorization.
+
+## Requirements
+
+- Python 3.8.
+- Ubuntu 20.04 LTS
+ 
+## Supported Classes
+The application supports the following classes:
+
+- BaseModel
+- User
+- State
+- City
+- Amenity
+- Place
+- Review
+
 
 ## Learning Objectives
 
@@ -72,7 +88,7 @@ The command interpreter is a Python-based CLI that provides a shell for interact
 - quit: Exit the command interpreter
 
 
-## Getting Started
+## How to Use
 To get started with the Airbnb Clone Project, follow these steps:
 
 ## Installation
@@ -208,25 +224,6 @@ To run the unit tests, use the following command from the root directory of the 
 python3 -m unittest discover tests
 ```
 This command will discover and execute all test cases in the tests directory.
-
-## Requirements
-
-- Python 3.8.
-- Ubuntu 20.04 LTS
-
-##
-- W3C compliant HTML code
- 
-## Supported Classes
-The application supports the following classes:
-
-- BaseModel
-- User
-- State
-- City
-- Amenity
-- Place
-- Review
 
 ## Tasks
 
