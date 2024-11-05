@@ -194,3 +194,52 @@ Write an HTML page that displays a header, footer, and a filters box with a sear
 
 ---
 
+# Task 5: More Filters
+
+Write an HTML page that displays a header, footer, and a filters box.
+
+### Layout: (based on 4-index.html)
+
+**Locations and Amenities Filters:**
+- `<div>` tags
+  - `class="locations"` for the location filter and `class="amenities"` for the amenities filter  
+  - Inside the `.filters` section (same level as the "Search" button)
+  - Height: 100% of the `.filters` section
+  - Width: 25% of the `.filters` section
+  - Border-right: 1px solid #DDDDDD (only for the first left filter, i.e., location filter)
+  
+  **Contains a Title:**
+  - `<h3>` tag
+    - Font weight: 600
+    - Text: "States" for location filter or "Amenities" for the amenities filter
+
+  **Contains a Subtitle:**
+  - `<h4>` tag
+    - Font weight: 400
+    - Font size: 14px
+    - Text: fake contents (e.g., list of states or amenities)
+
+### Requirements:
+
+- You must use: `<header>`, `<footer>`, `<section>`, `<button>`, `<h3>`, and `<h4>` tags  
+- No inline styles  
+- You are not allowed to use the `<img>` tag  
+- You are not allowed to use the `<style>` tag in the `<head>` tag  
+- All images must be stored in the `images` folder  
+- You must have **4 CSS files**:
+  - `styles/4-common.css`: for the global style (body and `.container` styles)
+  - `styles/3-header.css`: for the header style
+  - `styles/3-footer.css`: for the footer style
+  - `styles/5-filters.css`: for the filters style
+
+<img width="2160" alt="85bfa50b96c2985723daa75b5e22f75ef16e2b2e" src="https://github.com/user-attachments/assets/69ecf449-d21a-43a0-9ee0-3f3cd093b42e">
+
+
+**Repo:**
+
+- GitHub repository: AirBnB_clone  
+- Directory: web_static  
+- File: 5-index.html, `styles/4-common.css`, `styles/3-header.css`, `styles/3-footer.css`, `styles/5-filters.css`, `images/`
+
+---
+
