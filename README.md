@@ -7,7 +7,7 @@
 ![65f4a1dd9c51265f49d0](https://github.com/user-attachments/assets/0f1f1be0-d23d-4029-83e6-11a17532be61)
 
 ## Introduction
-Welcome to the **hbnb (Airbnb Clone) Project**! This project aims to replicate the core functionality of the Airbnb platform. It includes a **command-line interpreter (CLI)** (console)** that allows you to interact with the application’s data(objects). The data is stored in **JSON files** and represents the backend of an Airbnb-like application. The CLI lets you manage various objects in the system, such as Users**, Places**, Cities**, States**, Amenities**, and Reviews**. With this tool, you can **create**, **retrieve**, **update**, and **delete** these objects. This functionality is important for developers to test and manage the application's data as they build and refine the system.
+Welcome to the **hbnb (Airbnb Clone) Project**! This project aims to replicate the core functionality of the Airbnb platform. It includes a **command-line interpreter (CLI)** (console)** that allows you to interact with the application’s data(objects). The data is stored in **JSON files** and represents the backend of an Airbnb-like application. The CLI lets you manage various objects in the system, such as **Users**, **Places**, **Cities**, **States**, **Amenities**, and **Reviews**. With this tool, you can **create**, **retrieve**, **update**, and **delete** these objects. This functionality is important for developers to test and manage the application's data as they build and refine the system.
 
 ## Objective
 
