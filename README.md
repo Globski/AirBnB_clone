@@ -45,11 +45,6 @@ The main objective of this project is to develop a scalable and functional clone
 - **Integration with External APIs:** Integrate external APIs for additional functionality.
 - **User Authentication and Authorization:** Implement user authentication and authorization.
 
-## Requirements
-
-- Python 3.8.
-- Ubuntu 20.04 LTS
- 
 ## Supported Classes
 The application supports the following classes:
 
@@ -61,6 +56,49 @@ The application supports the following classes:
 - Place
 - Review
 
+- Write a command interpreter to manage your AirBnB objects.
+-  HTML/CSS templating, database storage, API, front-end integration…
+-  put in place a parent class (called BaseModel) to take care of the initialization, serialization and deserialization of your future instances
+-  create a simple flow of serialization/deserialization: Instance <-> Dictionary <-> JSON string <-> file
+-  create all classes used for AirBnB (User, State, City, Place…) that inherit from BaseModel
+-  create the first abstracted storage engine of the project: File storage.
+-  create all unittests to validate all our classes and storage engine
+
+## Environment
+
+- Python 3.8.
+- Ubuntu 20.04 LTS
+- pycodestyle (version 2.8.*)
+
+## Requirements
+
+### Python Scripts
+- All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
+- All your files should end with a new line
+- The first line of all your files should be exactly #!/usr/bin/python3
+- Your code should use the pycodestyle (version 2.8.*)
+- All your files must be executable
+- The length of your files will be tested using wc
+- All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
+- All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
+- All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
+- A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
+
+### Python Unit Tests
+- All your files should end with a new line
+- All your test files should be inside a folder tests
+- You have to use the unittest module
+- All your test files should be python files (extension: .py)
+- All your test files and folders should start by test_
+- Your file organization in the tests folder should be the same as your project
+- e.g., For models/base_model.py, unit tests must be in: tests/test_models/test_base_model.py
+- e.g., For models/user.py, unit tests must be in: tests/test_models/test_user.py
+- All your tests should be executed by using this command: python3 -m unittest discover tests
+- You can also test file by file by using this command: python3 -m unittest tests/test_models/test_base_model.py
+- All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
+- All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
+- All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3
+- c 'print(__import__("my_module").MyClass.my_function.__doc__)')
 
 ## Learning Objectives
 
@@ -225,67 +263,10 @@ python3 -m unittest discover tests
 ```
 This command will discover and execute all test cases in the tests directory.
 
-## Tasks
-
-### More classes!
-- Write classes that inherit from BaseModel:
-  - State (models/state.py)
-    - Public class attributes:
-      - name: string (empty string)
-  - City (models/city.py)
-    - Public class attributes:
-      - state_id: string (empty string)
-      - name: string (empty string)
-  - Amenity (models/amenity.py)
-    - Public class attributes:
-      - name: string (empty string)
-  - Place (models/place.py)
-    - Public class attributes:
-      - city_id: string (empty string)
-      - user_id: string (empty string)
-      - name: string (empty string)
-      - description: string (empty string)
-      - number_rooms: integer (0)
-      - number_bathrooms: integer (0)
-      - max_guest: integer (0)
-      - price_by_night: integer (0)
-      - latitude: float (0.0)
-      - longitude: float (0.0)
-      - amenity_ids: list of string (empty list)
-  - Review (models/review.py)
-    - Public class attributes:
-      - place_id: string (empty string)
-      - user_id: string (empty string)
-      - text: string (empty string)
-
-### Console 1.0
-
-- Update FileStorage to manage correctly serialization and deserialization of all our new classes: Place, State, City, Amenity and Review
-- Update command interpreter (console.py) to allow those actions: show, create, destroy, update and all with all classes created previously.
-
-## Advanced Features
-
-### All instances by class name
-- Update command interpreter (console.py) to retrieve all instances of a class by using `<class name>.all()`
-
-### Count instances
-- Update command interpreter (console.py) to retrieve the number of instances of a class using `<class name>.count()`
-
-### Show
-- Update command interpreter (console.py) to retrieve an instance based on its ID using `<class name>.show(<id>)`
-
-### Destroy
-- Update command interpreter (console.py) to destroy an instance based on its ID using `<class name>.destroy(<id>)`
-
-### Update
-- Update command interpreter (console.py) to update an instance based on its ID using `<class name>.update(<id>, <attribute name>, <attribute value>)`
-
-### Update from dictionary
-- Update command interpreter (console.py) to update an instance based on its ID with a dictionary using `<class name>.update(<id>, <dictionary representation>)`
-
-### Unittests for the Console!
-- Write unit tests for all features in console.py
-- Ensure tests pass in both interactive and non-interactive mode
+To run the unit tests in non-interactive mode:
+```bash
+$ echo "python3 -m unittest discover tests" | bash
+```
 
 ## Technologies Used
 
