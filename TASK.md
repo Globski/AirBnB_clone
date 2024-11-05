@@ -719,3 +719,104 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 
 ---
 
+## 14. Destroy
+
+
+- Update your command interpreter (`console.py`) to allow you to destroy an instance based on its ID using the following syntax:
+
+  ```bash
+  <class_name>.destroy(<id>)
+  ```
+
+  For example:
+
+  ```bash
+  (hbnb) User.destroy("246c227a-d5c1-403d-9bc7-6a47bb9f0f68")
+  ```
+
+  This should remove the instance with the specified ID from storage.
+
+- You should update the count of instances for that class as follows:
+
+  ```bash
+  (hbnb) User.count()
+  1
+  ```
+
+- Error management must be the same as previously. If an invalid ID is provided (e.g., an ID not found), the interpreter should return an error message like:
+
+  ```bash
+  ** no instance found **
+  ```
+
+### Example:
+
+```bash
+guillaume@ubuntu:~/AirBnB$ ./console.py
+(hbnb) User.count()
+2
+(hbnb) User.destroy("246c227a-d5c1-403d-9bc7-6a47bb9f0f68")
+(hbnb) User.count()
+1
+(hbnb) User.destroy("Bar")
+** no instance found **
+```
+
+### No unittests needed.
+
+---
+
+### Repo:
+
+- GitHub repository: `AirBnB_clone`
+- File: `console.py`
+
+---
+
+Here is task 15 in markdown format:
+
+---
+
+## 15. Update
+
+- Update your command interpreter (`console.py`) to allow updating an instance based on its ID and attribute name using the following syntax:
+
+  ```bash
+  <class_name>.update(<id>, <attribute_name>, <attribute_value>)
+  ```
+
+  For example:
+
+  ```bash
+  (hbnb) User.update("38f22813-2753-4d42-b37c-57a17f1e4f88", "first_name", "John")
+  ```
+
+  - This will update the `first_name` of the `User` instance with ID `"38f22813-2753-4d42-b37c-57a17f1e4f88"` to `"John"`.
+  
+  - If the attribute name is incorrect (e.g., `"age"` in the second command), the command should either silently ignore invalid attributes or handle the error, depending on the specification.
+
+### Example:
+
+```bash
+guillaume@ubuntu:~/AirBnB$ ./console.py
+(hbnb) User.show("38f22813-2753-4d42-b37c-57a17f1e4f88")
+[User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'first_name': 'Betty', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848291), 'password': 'b9be11166d72e9e3ae7fd407165e4bd2', 'email': 'airbnb@mail.com', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88'}
+(hbnb)
+(hbnb) User.update("38f22813-2753-4d42-b37c-57a17f1e4f88", "first_name", "John")
+(hbnb) User.update("38f22813-2753-4d42-b37c-57a17f1e4f88", "age", 89)
+(hbnb)
+(hbnb) User.show("38f22813-2753-4d42-b37c-57a17f1e4f88")
+[User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'age': 89, 'first_name': 'John', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 15, 32, 299055), 'password': 'b9be11166d72e9e3ae7fd407165e4bd2', 'email': 'airbnb@mail.com', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88'}
+(hbnb)
+```
+
+### No unittests needed.
+
+---
+
+### Repo:
+
+- GitHub repository: `AirBnB_clone`
+- File: `console.py`
+
+---
