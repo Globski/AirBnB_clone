@@ -13,8 +13,6 @@
 
 - **You should use branches and pull requests on GitHub** - it will help you as a team to organize your work.
 
----
-
 ### Repo:
 
 - GitHub repository: `AirBnB_clone`
@@ -24,8 +22,6 @@
 ## 1. Be pycodestyle compliant!
 
 - **Write beautiful code that passes the `pycodestyle` checks.**
-
----
 
 ### Repo:
 
@@ -67,8 +63,6 @@ Ran 189 tests in 13.135s
 
 OK
 ```
-
----
 
 ### Repo:
 
@@ -141,8 +135,6 @@ JSON of my_model:
 
 guillaume@ubuntu:~/AirBnB$
 ```
-
----
 
 ### Repo:
 
@@ -229,8 +221,6 @@ False
 
 guillaume@ubuntu:~/AirBnB$ 
 ```
-
----
 
 ### Repo:
 
@@ -338,8 +328,6 @@ guillaume@ubuntu:~/AirBnB$ cat file.json ; echo ""
 guillaume@ubuntu:~/AirBnB$ 
 ```
 
----
-
 ### Repo:
 - GitHub repository: `AirBnB_clone`
 - Files: `models/engine/file_storage.py`, `models/engine/__init__.py`, `models/__init__.py`, `models/base_model.py`, `tests/`
@@ -427,8 +415,6 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 
 No unittests needed
 
----
-
 ### Repo:
 - GitHub repository: `AirBnB_clone`
 - Files: `console.py`
@@ -511,8 +497,6 @@ guillaume@ubuntu:~/AirBnB$
 ```
 
 No unittests needed for the console
-
---- 
 
 ### Repo:
 - GitHub repository: `AirBnB_clone`
@@ -629,8 +613,6 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 ```
 
 ### No unittests needed.
-
----
 
 ### Repo:
 
