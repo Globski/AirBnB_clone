@@ -344,3 +344,210 @@ Write an HTML page that displays a header, footer, a filters box with dropdown, 
 
 ---
 
+# Task 8: More Details
+
+Write an HTML page that displays a header, a footer, a filter box (dropdown list), and the result of the search.
+
+### Layout: (based on 7-index.html)
+
+**Add More Information to a Place Article:**
+
+1. **Price by Night:**
+   - Tag: `<div>`
+   - `class="price_by_night"`
+   - Same level as the place name (`<h2>`)
+   - Font color: #FF5A5F
+   - Border: 4px solid #FF5A5F with rounded corners
+   - Minimum width: 60px
+   - Height: 60px
+   - Font size: 30px
+   - Align: top right (with space)
+
+2. **Information Section:**
+   - Tag: `<div>`
+   - `class="information"`
+   - Height: 80px
+   - Border: top and bottom 1px solid #DDDDDD
+   - Contains (align vertically):
+   
+     - **Number of Guests:**
+       - Tag: `<div>`
+       - `class="max_guest"`
+       - Width: 100px
+       - Fake text
+       - Icon
+
+     - **Number of Bedrooms:**
+       - Tag: `<div>`
+       - `class="number_rooms"`
+       - Width: 100px
+       - Fake text
+       - Icon
+
+     - **Number of Bathrooms:**
+       - Tag: `<div>`
+       - `class="number_bathrooms"`
+       - Width: 100px
+       - Fake text
+       - Icon
+
+3. **User Section:**
+   - Tag: `<div>`
+   - `class="user"`
+   - Text: "Owner: <fake text>"
+   - Owner text should be in bold
+
+4. **Description Section:**
+   - Tag: `<div>`
+   - `class="description"`
+
+### Requirements:
+
+- You must use: `<header>`, `<footer>`, `<section>`, `<article>`, `<button>`, `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<ul>`, and `<li>` tags  
+- No inline styles  
+- You are not allowed to use the `<img>` tag  
+- You are not allowed to use the `<style>` tag in the `<head>` tag  
+- All images must be stored in the `images` folder  
+- You must have **5 CSS files**:
+  - `styles/4-common.css`: for the global style (i.e. body and `.container` styles)
+  - `styles/3-header.css`: for the header style
+  - `styles/3-footer.css`: for the footer style
+  - `styles/6-filters.css`: for the filters style
+  - `styles/8-places.css`: for the places style
+
+<img width="1604" alt="f4b2d4ef94bd3a2e7e1ddefa81236595686d270e" src="https://github.com/user-attachments/assets/7bb259fc-5b51-4604-b69f-f3a6c6d138b5">
+
+
+**Repo:**
+
+- GitHub repository: AirBnB_clone  
+- Directory: web_static  
+- File: 8-index.html, `styles/4-common.css`, `styles/3-header.css`, `styles/3-footer.css`, `styles/6-filters.css`, `styles/8-places.css`, `images/`
+
+---
+
+# Task 9: Full Details
+
+Write an HTML page that displays a header, footer, a filters box with dropdown, and results.
+
+### Layout: (based on 8-index.html)
+
+**Add More Information to a Place Article:**
+
+1. **List of Amenities:**
+   - Tag: `<div>`
+   - `class="amenities"`
+   - Margin top: 40px
+   - Contains:
+   
+     - **Title:**
+       - Tag: `<h2>`
+       - Text: "Amenities"
+       - Font size: 16px
+       - Border bottom: 1px solid #DDDDDD
+
+     - **List of Amenities:**
+       - Tag: `<ul>` / `<li>`
+       - No list style
+       - Icons on the left (e.g., Pet friendly, TV, Wifi, etc.) — feel free to add more
+
+2. **List of Reviews:**
+   - Tag: `<div>`
+   - `class="reviews"`
+   - Margin top: 40px
+   - Contains:
+   
+     - **Title:**
+       - Tag: `<h2>`
+       - Text: "Reviews"
+       - Font size: 16px
+       - Border bottom: 1px solid #DDDDDD
+
+     - **List of Reviews:**
+       - Tag: `<ul>` / `<li>`
+       - No list style
+       
+       - A review is described by:
+         - `<h3>` tag for the user/date description (font size: 14px). Example: "From Bob Dylan the 27th January 2017"
+         - `<p>` tag for the text (font size: 12px)
+
+### Requirements:
+
+- You must use: `<header>`, `<footer>`, `<section>`, `<article>`, `<button>`, `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<ul>`, and `<li>` tags  
+- No inline styles  
+- You are not allowed to use the `<img>` tag  
+- You are not allowed to use the `<style>` tag in the `<head>` tag  
+- All images must be stored in the `images` folder  
+- You must have **5 CSS files**:
+  - `styles/4-common.css`: for the global style (i.e. body and `.container` styles)
+  - `styles/3-header.css`: for the header style
+  - `styles/3-footer.css`: for the footer style
+  - `styles/6-filters.css`: for the filters style
+  - `styles/100-places.css`: for the places style
+
+<img width="2160" alt="f54486a431a05ea3477e337e0e953686d3c6ffd0" src="https://github.com/user-attachments/assets/cd9cb241-a962-4f13-970d-1cc99c40457b">
+
+
+**Repo:**
+
+- GitHub repository: AirBnB_clone  
+- Directory: web_static  
+- File: 100-index.html, `styles/4-common.css`, `styles/3-header.css`, `styles/3-footer.css`, `styles/6-filters.css`, `styles/100-places.css`, `images/`
+
+---
+
+# Task 10: Flex
+
+Improve the Places section by using [**Flexible Boxes**](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) for all Place articles.
+
+[**Flexbox Froggy**](https://flexboxfroggy.com/)
+
+### Requirements:
+
+- You must use **Flexbox** to arrange the Place articles in the Places section.
+- Ensure that all Place articles are properly aligned using Flexbox properties.
+
+**Repo:**
+
+- GitHub repository: AirBnB_clone  
+- Directory: web_static  
+- File: `101-index.html`, `styles/4-common.css`, `styles/3-header.css`, `styles/3-footer.css`, `styles/6-filters.css`, `styles/101-places.css`, `images/`
+
+---
+
+# Task 11: Responsive Design
+
+Improve the page by adding [**responsive design**](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) to display correctly on mobile or small screens.
+
+### Examples:
+- Prevent horizontal scrolling on smaller screens.
+- Redesign the search bar depending on the width of the screen.
+- Other general responsive design improvements to enhance the page's layout on mobile devices.
+
+**Repo:**
+
+- GitHub repository: AirBnB_clone  
+- Directory: web_static  
+- File: `102-index.html`, `styles/102-common.css`, `styles/102-header.css`, `styles/102-footer.css`, `styles/102-filters.css`, `styles/102-places.css`, `images/`
+
+---
+
+# Task 12: Accessibility
+
+Improve the page by adding [**Accessibility**](https://developer.mozilla.org/en-US/docs/Learn/Accessibility) support.
+
+### Examples:
+- Ensure proper **color contrast** for readability, particularly for text on colored backgrounds.
+- Use appropriate **header tags** (`<h1>`, `<h2>`, etc.) for a clear content hierarchy.
+- Consider adding **alt text** for images, appropriate link descriptions, and any other accessibility enhancements for screen readers and keyboard navigation.
+- Ensure the page is **navigable** and usable for users with disabilities.
+
+---
+
+**Repo:**
+
+- GitHub repository: AirBnB_clone  
+- Directory: web_static  
+- File: `103-index.html`, `styles/103-common.css`, `styles/103-header.css`, `styles/103-footer.css`, `styles/103-filters.css`, `styles/103-places.css`, `images/`
+
+---
