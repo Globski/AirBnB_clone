@@ -863,3 +863,42 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 - File: `console.py`
 
 ---
+
+
+## 17. Unittests for the Console!
+
+- Write unit tests for the `console.py` file, ensuring that all features of the console are tested.
+  
+- For testing the console commands, intercept the standard output (STDOUT) using Python's `unittest` library. You should use the following pattern to capture and test the output:
+For testing the console, you should intercept the standard output (STDOUT) using Python's `unittest` library, we highly recommend you to use:
+  ```python
+  with patch('sys.stdout', new=StringIO()) as f:
+      HBNBCommand().onecmd("<command>")
+  ```
+Otherwise, you will have to re-write the console by replacing precmd by default.
+
+
+  This will allow you to simulate running commands in the console and capture their output to validate the behavior.
+
+- You need to write tests for all the features in the command interpreter, including but not limited to:
+  - `show` command
+  - `create` command
+  - `destroy` command
+  - `update` command
+  - `all` command
+  - `count` command
+  - Etc.
+
+
+### Goals:
+
+- Make sure to test all console features and handle errors (e.g., invalid ID or command).
+  
+- Add sufficient test cases for each command like `create`, `destroy`, `update`, etc.
+
+---
+
+### Repo:
+
+- GitHub repository: `AirBnB_clone`
+- File: `tests/test_console.py`
