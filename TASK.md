@@ -820,3 +820,46 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 - File: `console.py`
 
 ---
+
+## 16. Update from dictionary
+
+
+- Update your command interpreter (`console.py`) to allow updating an instance based on its ID using a dictionary representation of the attributes.
+  
+  Syntax:
+  ```bash
+  <class_name>.update(<id>, <dictionary_representation>)
+  ```
+
+  The dictionary should contain the attributes to be updated. For example:
+
+  ```bash
+  (hbnb) User.update("38f22813-2753-4d42-b37c-57a17f1e4f88", {'first_name': "John", "age": 89})
+  ```
+
+  This command will update the `first_name` to `"John"` and the `age` to `89` for the `User` instance with the ID `"38f22813-2753-4d42-b37c-57a17f1e4f88"`.
+
+### Example:
+
+```bash
+guillaume@ubuntu:~/AirBnB$ ./console.py
+(hbnb) User.show("38f22813-2753-4d42-b37c-57a17f1e4f88")
+[User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'age': 23, 'first_name': 'Bob', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 15, 32, 299055), 'password': 'b9be11166d72e9e3ae7fd407165e4bd2', 'email': 'airbnb@mail.com', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88'}
+(hbnb)
+(hbnb) User.update("38f22813-2753-4d42-b37c-57a17f1e4f88", {'first_name': "John", "age": 89})
+(hbnb) 
+(hbnb) User.show("38f22813-2753-4d42-b37c-57a17f1e4f88")
+[User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'age': 89, 'first_name': 'John', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 17, 10, 788143), 'password': 'b9be11166d72e9e3ae7fd407165e4bd2', 'email': 'airbnb@mail.com', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88'}
+(hbnb)
+```
+
+### No unittests needed.
+
+---
+
+### Repo:
+
+- GitHub repository: `AirBnB_clone`
+- File: `console.py`
+
+---
