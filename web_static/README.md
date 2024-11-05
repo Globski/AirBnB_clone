@@ -20,3 +20,20 @@ Web static development involves creating static HTML pages and applying styles u
 | 10. Flex (Advanced) | Improve the Places section by using Flexible boxes for all Place articles. | [10-index.html](web_static/10-index.html), [styles/10-common.css](web_static/styles/10-common.css), [styles/10-header.css](web_static/styles/10-header.css), [styles/10-footer.css](web_static/styles/10-footer.css), [styles/10-filters.css](web_static/styles/10-filters.css), [styles/10-places.css](web_static/styles/10-places.css), [images/](web_static/images/) |
 | 11. Responsive design (Advanced) | Improve the page by adding responsive design for mobile or small screens. | [11-index.html](web_static/11-index.html), [styles/11-common.css](web_static/styles/11-common.css), [styles/11-header.css](web_static/styles/11-header.css), [styles/11-footer.css](web_static/styles/11-footer.css), [styles/11-filters.css](web_static/styles/11-filters.css), [styles/11-places.css](web_static/styles/11-places.css), [images](web_static/images/) |
 | 12. Accessibility (Advanced) | Improve accessibility by adding semantic tags to the HTML structure. |  [12-index.html](web_static/12-index.html), [styles/12-common.css](web_static/styles/12-common.css), [styles/12-header.css](web_static/styles/12-header.css), [styles/12-footer.css](web_static/styles/12-footer.css), [styles/12-filters.css](web_static/styles/12-filters.css), [styles/12-places.css](web_static/styles/12-places.css), [images](web_static/images/) |
+
+## Learning Objectives
+
+HTML, CSS, and front-end development:
+- What is HTML
+- How to create an HTML page
+- What is a markup language
+- What is the DOM
+- What is an element / tag
+- What is an attribute
+- How does the browser load a webpage
+- What is CSS
+- How to add style to an element
+- What is a class
+- What is a selector
+- How to compute CSS Specificity Value
+- What are Box properties in CSS
