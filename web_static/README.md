@@ -1,3 +1,9 @@
+# AirBnB Clone - web static
+
+## Description
+
+Web static development involves creating static HTML pages and applying styles using CSS. Building the front end step-by-step by creating simple HTML static pages, style guides, and fake contents without using JavaScript. The main goal is to learn how to manipulate HTML and CSS languages.
+
 ##
 | Task | Description | File |
 |------|-------------|------|
